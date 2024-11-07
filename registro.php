@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="btn_save"> <i class="far fa-save"></i> Crear usuario</button>
         </form>
     </div>
-    
+    <!-- esta partes son los js -->
     <script src="assets/js/functions.js" defer></script>
     <script src="assets/js/icons.js" defer></script>
     <script src="assets/js/jquery.min.js" defer></script>
