@@ -24,7 +24,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header>
+    <header> <!-- Esta parte es la cabezera de la pagina seccion productos   -->
       <div class="menu logo-nav">
         <a href="index.php" class="logo">TINKUNAGAMES</a>
         <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
