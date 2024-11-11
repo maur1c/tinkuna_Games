@@ -1,11 +1,12 @@
 <?php 
 session_start();
-if ($_SESSION['rol_id'] != 1 && $_SESSION['rol_id'] != 4) {
+if ($_SESSION['rol_id'] != 1 && $_SESSION['rol_id'] != 2) {
     header("Location: login.php");
     exit;
 }
 
 include "conexion.php";
+include "functions.php";
 
 if (!empty($_POST)) {
     $alert = '';
