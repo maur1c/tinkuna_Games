@@ -1,16 +1,29 @@
 <?php
 include 'conexion.php';
+include "functions.php";
 session_start();
 
 // Verificar si el usuario está autenticado y es un administrador
-if (!isset($_SESSION['usuario_id']) || $_SESSION['rol_id'] != 1) { // Suponiendo que el ID del rol 'admin' es 1
+if (!isset($_SESSION['usuario_id']) || $_SESSION['rol_id'] != 1) {
     header('Location: login.php');
     exit();
 }
 
-// Obtener todos los productos
-$stmt = $conn->query("SELECT * FROM productos");
-$productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Paginación y obtención de productos
+$sql_register = $conn->query("SELECT COUNT(*) as total_registro FROM juegos_de_mesa WHERE estatus = 1");
+$result_register = $sql_register->fetch(PDO::FETCH_ASSOC);
+$total_registro = $result_register['total_registro'];
+
+$por_pagina = 5;
+$pagina = empty($_GET['pagina']) ? 1 : $_GET['pagina'];
+$desde = ($pagina - 1) * $por_pagina;
+$total_paginas = ceil($total_registro / $por_pagina);
+
+$query = $conn->prepare("SELECT * FROM juegos_de_mesa WHERE estatus = 1 ORDER BY id_juego ASC LIMIT :desde, :por_pagina");
+$query->bindParam(':desde', $desde, PDO::PARAM_INT);
+$query->bindParam(':por_pagina', $por_pagina, PDO::PARAM_INT);
+$query->execute();
+$productos = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -19,58 +32,84 @@ $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar Productos</title>
+    <link rel="stylesheet" href="assets/css/admin.css">
 </head>
 <body>
-    <h1>Administración de Productos</h1>
-    <a href="agregar_producto.php">Agregar nuevo producto</a>
+
+<header> 
+    <div class="logo">Sistema TinkunaGames</div>
+    <div class="user-info">
+        <span>Bolivia, <?php echo fechaC(); ?> | 
+            <?php echo $_SESSION['rol_id'] == 1 ? 'ADMIN' : 'USUARIO'; ?>
+            - <?php echo $_SESSION['nombre']; ?> - <?php echo $_SESSION['correo']; ?>
+        </span>
+        <img src="assets/img/user.png" alt="User Icon" class="user-icon">
+        <a href="logout.php" class="logout-icon"><img src="assets/img/salir.png" alt="Logout"></a>
+    </div>
+</header>
+
+<?php include 'nav.php'; ?>
+
+<section id="container">
+    <h1><i class='fas fa-cogs'></i> Lista de Productos</h1>
+    <a href="registro_producto.php" class="btn_new"><i class="fas fa-plus"></i> Agregar Producto</a>
+
+    <form action="buscar_producto.php" method="get" class="form_search">
+        <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+        <button type="submit" class="btn_search"><i class="fas fa-search"></i></button>
+    </form>
+
     <table>
-        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+        <?php foreach ($productos as $data): ?>
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($productos as $producto): ?>
-            <tr>
-                <td><?php echo $producto['id']; ?></td>
-                <td><?php echo $producto['nombre']; ?></td>
-                <td><?php echo $producto['descripcion']; ?></td>
-                <td><?php echo $producto['precio']; ?></td>
+                <td><?php echo $data["id_juego"]; ?></td>
+                <td><?php echo $data["nombre"]; ?></td>
+                <td><?php echo $data["descripcion"]; ?></td>
+                <td><?php echo $data["precio"]; ?></td>
                 <td>
-                    <a href="editar_producto.php?id=<?php echo $producto['id']; ?>">Editar</a> |
-                    <a href="eliminar_producto.php?id=<?php echo $producto['id']; ?>">Eliminar</a>
+                    <a class="link_edit" href="editar_producto.php?id=<?php echo $data["id_juego"]; ?>"><i class="far fa-edit"></i> Editar</a> |
+                    <a class="link_delete" href="eliminar_producto.php?id=<?php echo $data["id_juego"]; ?>"><i class="far fa-trash-alt"></i> Eliminar</a>
                 </td>
             </tr>
-            <?php endforeach; ?>
-        </tbody>
+        <?php endforeach; ?>
     </table>
-    <div class="menu logo-nav">
-        <a href="index.php" class="logo">TinkunaGames</a>
-        <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
-        <nav class="navigation">
-          <ul>
-            
-            <li><a href="nosotros.php">Nosotros</a></li>
-            <li><a href="productos.php">Productos</a></li>
-            <li><a href="contacto.php">Contacto</a></li>
-            <li class="search-icon">
-              <input type="search" placeholder="Search">
-              <label class="icon">
-                <span class="fas fa-search"></span>
-              </label>
-            </li>
-            <li class="car"><a href="carrito.php" >
-              <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-              </svg></a>
-            </li>
-            <li><a href="login.php">Inicio Sesion</a></li>
-          </ul>
-        </nav>
-      </div>
+
+    <div class="paginador">
+			<ul>
+			<?php 
+				if ($pagina != 1) {
+			?>
+				<li><a href="?pagina=<?php echo 1; ?>"><i class="fas fa-step-backward"></i></a></li>
+				<li><a href="?pagina=<?php echo $pagina - 1; ?>"><i class="fas fa-caret-left fa-lg"></i></a></li>
+			<?php 
+				}
+				for ($i = 1; $i <= $total_paginas; $i++) { 
+					if ($i == $pagina) {
+						echo '<li class="pageSelected">' . $i . '</li>';
+					} else {
+						echo '<li><a href="?pagina=' . $i . '">' . $i . '</a></li>';
+					}
+				}
+
+				if ($pagina != $total_paginas) {
+			?>
+				<li><a href="?pagina=<?php echo $pagina + 1; ?>"><i class="fas fa-caret-right fa-lg"></i></a></li>
+				<li><a href="?pagina=<?php echo $total_paginas; ?>"><i class="fas fa-step-forward"></i></a></li>
+			<?php } ?>
+			</ul>
+		</div>
+</section>
+
+<script src="assets/js/functions.js" defer></script>
+<script src="assets/js/icons.js" defer></script>
+<script src="assets/js/jquery.min.js" defer></script>
+
 </body>
 </html>
