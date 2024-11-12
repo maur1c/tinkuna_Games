@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 04-11-2024 a las 18:26:30
+-- Tiempo de generación: 12-11-2024 a las 20:12:52
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -58,12 +58,16 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`idcliente`, `nit`, `nombre`, `telefono`, `direccion`, `dateadd`, `usuario_id`, `estatus`) VALUES
 (1, 12353535, 'mauri', 63998735, 'A.Ustriz', '2024-10-31 15:55:45', 2, 1),
 (2, 323342, 'osmar', 342543545, 'Bolivia-Cochabamba', '2024-10-31 17:22:23', 1, 1),
-(3, 45433543, 'jose', 63998735, 'A.Ustriz', '2024-10-31 17:24:54', 9, 1),
+(3, 1111112, 'jose Zapata', 63998736, 'Bolivia-Cochabamba', '2024-10-31 17:24:54', 9, 1),
 (4, 325464, 'ana', 32543535, 'bolivia', '2024-10-31 17:25:34', 9, 1),
 (5, 3325343, 'marta', 44534534, 'Bolivia-Cochabamba', '2024-10-31 17:29:00', 9, 1),
 (6, 352353, 'lois', 224343243, 'Bolivia-Cochabamba', '2024-10-31 17:29:30', 9, 1),
 (7, 35234534, 'jose luis', 4534535, 'Bolivia-Cochabamba', '2024-10-31 17:30:14', 1, 1),
-(8, 345453, 'boli', 34543534, 'Bolivia-Cochabamba', '2024-10-31 17:30:41', 1, 1);
+(8, 345453, 'boli', 34543534, 'Bolivia-Cochabamba', '2024-10-31 17:30:41', 1, 1),
+(9, 12, 'simon', 4343, 'Bolivia-Cochabamba', '2024-11-06 13:31:44', 9, 1),
+(10, 0, 'simon2', 2434, 'Bolivia-Cochabamba', '2024-11-06 13:39:10', 1, 1),
+(11, 0, 'simon5', 3434, 'Bolivia-Cochabamba', '2024-11-06 13:48:45', 1, 1),
+(12, 34, 'lurdes', 34343, 'Bolivia-Cochabamba', '2024-11-06 13:50:04', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -73,10 +77,10 @@ INSERT INTO `clientes` (`idcliente`, `nit`, `nombre`, `telefono`, `direccion`, `
 
 CREATE TABLE `contactos` (
   `id` int NOT NULL,
-  `nombre` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `asunto` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
-  `mensaje` text COLLATE utf8mb4_general_ci NOT NULL,
+  `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `asunto` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `mensaje` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -90,6 +94,20 @@ INSERT INTO `contactos` (`id`, `nombre`, `email`, `asunto`, `mensaje`, `fecha`) 
 (3, 'arke', 'mauri@gmail.com', 'juego', 'holaaaaaa32', '2024-10-02 20:41:25'),
 (4, 'mauri', 'mauriciomamaniflores09@gmail.com', 'pruebas unitarias', 'pruebas ', '2024-10-28 19:46:03'),
 (5, 'mauri', 'mauriciomamaniflores09@gmail.com', 'pruebas unitarias', 'Pruebas ', '2024-10-28 19:47:44');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `factura`
+--
+
+CREATE TABLE `factura` (
+  `nofactura` bigint NOT NULL,
+  `fecha` datetime NOT NULL,
+  `usuario` int DEFAULT NULL,
+  `codcliente` int DEFAULT NULL,
+  `totaltactura` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -111,43 +129,39 @@ CREATE TABLE `historial_de_compra` (
 --
 
 INSERT INTO `historial_de_compra` (`id`, `usuario_id`, `producto_id`, `cantidad`, `precio`, `fecha_compra`) VALUES
-(1, 1, 7, 1, 400.00, '2024-10-11 15:28:10'),
-(2, 1, 6, 1, 300.00, '2024-10-11 15:29:49'),
-(3, 1, 7, 1, 400.00, '2024-10-11 15:37:03'),
-(4, 1, 2, 1, 24.00, '2024-10-11 15:39:04'),
-(5, 1, 2, 1, 24.00, '2024-10-11 15:39:56'),
-(6, 1, 6, 1, 300.00, '2024-10-11 15:43:40'),
-(7, 1, 8, 1, 23.00, '2024-10-11 15:48:47'),
-(9, 1, 6, 1, 300.00, '2024-10-11 15:59:51'),
-(10, 1, 2, 1, 24.00, '2024-10-11 16:02:32'),
-(11, 1, 6, 1, 300.00, '2024-10-11 16:03:29'),
-(12, 1, 2, 1, 24.00, '2024-10-11 16:35:17'),
-(13, 1, 2, 1, 24.00, '2024-10-11 16:41:02'),
-(14, 1, 2, 1, 24.00, '2024-10-14 08:38:05'),
-(15, 1, 2, 1, 24.00, '2024-10-14 08:38:54'),
-(16, 1, 8, 1, 23.00, '2024-10-14 08:39:26'),
-(17, 1, 8, 1, 23.00, '2024-10-14 08:39:26'),
-(18, 1, 8, 1, 23.00, '2024-10-14 08:39:26'),
-(19, 1, 2, 1, 24.00, '2024-10-14 14:59:49'),
-(20, 1, 2, 1, 24.00, '2024-10-14 16:51:36'),
-(21, 1, 2, 1, 24.00, '2024-10-15 15:47:34'),
-(22, 1, 8, 1, 23.00, '2024-10-15 15:50:21'),
-(23, 1, 2, 1, 24.00, '2024-10-15 15:52:51'),
-(24, 1, 2, 1, 24.00, '2024-10-19 17:37:45'),
-(25, 1, 2, 1, 24.00, '2024-10-19 17:45:17'),
-(26, 1, 2, 1, 24.00, '2024-10-21 15:10:52'),
-(27, 1, 2, 1, 24.00, '2024-10-21 15:15:34'),
-(28, 8, 10, 1, 10.00, '2024-10-21 17:33:01'),
-(29, 8, 10, 1, 10.00, '2024-10-21 17:36:56'),
-(30, 8, 10, 1, 10.00, '2024-10-21 17:40:10'),
-(31, 1, 10, 1, 10.00, '2024-10-21 17:50:16'),
-(32, 8, 10, 1, 10.00, '2024-10-21 17:53:55'),
-(33, 10, 10, 1, 10.00, '2024-10-21 18:03:30'),
-(34, 10, 10, 1, 10.00, '2024-10-21 18:04:29'),
-(35, 11, 10, 1, 10.00, '2024-10-21 18:26:20'),
-(36, 7, 2, 1, 20.00, '2024-10-22 17:16:40'),
-(37, 1, 12, 1, 5.00, '2024-10-28 15:56:29'),
-(38, 1, 11, 1, 5.00, '2024-10-28 15:56:29');
+(52, 3, 45, 1, 145.00, '2024-11-12 15:05:22'),
+(53, 1, 48, 1, 170.00, '2024-11-12 16:03:25'),
+(54, 1, 49, 1, 170.00, '2024-11-12 16:12:07');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `juegos_de_mesa`
+--
+
+CREATE TABLE `juegos_de_mesa` (
+  `id_juego` int NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` text,
+  `categoria` varchar(50) DEFAULT NULL,
+  `precio` decimal(10,2) NOT NULL,
+  `estatus` tinyint(1) DEFAULT '1',
+  `publicado` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `juegos_de_mesa`
+--
+
+INSERT INTO `juegos_de_mesa` (`id_juego`, `nombre`, `descripcion`, `categoria`, `precio`, `estatus`, `publicado`) VALUES
+(5, 'arke123456', 'juego IAao', 'familiar', 145.00, 1, 1),
+(6, 'Monopoly 12', 'juego familiar', 'familiar', 300.00, 1, 1),
+(7, 'arke', 'juego', 'estatega', 30.00, 1, 1),
+(8, 'zombiecide', 'juego', 'apocalictico', 170.00, 1, 1),
+(9, 'zombiecide', 'juego12', 'apocalictico1', 30.00, 1, 1),
+(10, 'simon', 'juego', 'estatega', 10.00, 1, 1),
+(11, 'simon1', 'juego', 'familiar', 170.00, 1, 1),
+(12, 'catan', 'juego', 'estratega', 170.00, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -179,24 +193,55 @@ INSERT INTO `pedidos` (`id`, `usuario_id`, `total`, `fecha`) VALUES
 
 CREATE TABLE `productos` (
   `id` int NOT NULL,
-  `nombre` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `descripcion` text COLLATE utf8mb4_general_ci,
+  `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `precio` decimal(10,2) DEFAULT NULL,
-  `imagen` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `imagen` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `proveedor` int DEFAULT NULL,
+  `existencia` int DEFAULT NULL,
+  `date_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `id_juego` int DEFAULT NULL,
+  `estatus` tinyint(1) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`) VALUES
-(2, 'arke', 'juego', 20.00, 'Ark Nova.jpg'),
-(6, 'catan', 'juego', 300.00, 'imagesCATAN.jpeg'),
-(7, 'zombiecide', 'juego', 400.00, 'zombicide.jpg'),
-(8, 'arke', 'juego', 23.00, 'Ark Nova.jpg'),
-(10, 'zombie', 'juegos buenos', 10.00, 'zombicide.jpg'),
-(11, 'zombie', 'juegos buenos', 5.00, 'zombicide.jpg'),
-(12, 'zombie', 'juegos buenos', 5.00, 'zombicide.jpg');
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `proveedor`, `existencia`, `date_add`, `id_juego`, `estatus`) VALUES
+(31, 'Monopoly 12', 'juego familiar', 300.00, '1731439527_accsesorios.jpeg', NULL, NULL, '2024-11-12 13:53:58', 6, 1),
+(32, 'arke', 'juego', 30.00, 'Ark Nova.jpg', NULL, NULL, '2024-11-12 13:56:45', 7, 1),
+(41, 'zombiecide', 'juego', 170.00, 'zombicide.jpg', NULL, NULL, '2024-11-12 14:15:22', 8, 1),
+(45, 'arke123456', 'juego IAao', 145.00, '1731438233_consola.jpeg', NULL, NULL, '2024-11-12 14:46:43', 5, 1),
+(46, 'zombiecide', 'juego12', 30.00, '1731438649_zombicide.jpg', NULL, NULL, '2024-11-12 14:46:48', 9, 1),
+(47, 'simon', 'juego', 10.00, 'Logo.jpg', NULL, NULL, '2024-11-12 15:54:39', 10, 1),
+(48, 'simon1', 'juego', 170.00, 'video juegos.png', NULL, NULL, '2024-11-12 16:02:22', 11, 1),
+(49, 'catan', 'juego', 170.00, 'imagesCATAN.jpeg', NULL, NULL, '2024-11-12 16:04:12', 12, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proveedor`
+--
+
+CREATE TABLE `proveedor` (
+  `codproveedor` int NOT NULL,
+  `proveedor` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `contacto` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `telefono` int DEFAULT NULL,
+  `direccion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `date_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `usuario_id` int NOT NULL,
+  `estatus` int NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `proveedor`
+--
+
+INSERT INTO `proveedor` (`codproveedor`, `proveedor`, `contacto`, `telefono`, `direccion`, `date_add`, `usuario_id`, `estatus`) VALUES
+(31, 'helado', 'Mauricio Mamani F', 5354354, 'Bolivia-Cochabamba', '2024-11-12 15:46:38', 1, 0),
+(32, 'pil', 'Claudia Rosaless', 43545476, 'Bolivia-Cochabamba', '2024-11-12 15:52:50', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -227,9 +272,9 @@ INSERT INTO `roles` (`id`, `nombre_rol`) VALUES
 
 CREATE TABLE `usuarios` (
   `id` int NOT NULL,
-  `nombre` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `email` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `contraseña` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `contraseña` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha_registro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `rol_id` int NOT NULL,
   `estatus` tinyint(1) DEFAULT '1'
@@ -287,12 +332,26 @@ ALTER TABLE `contactos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `factura`
+--
+ALTER TABLE `factura`
+  ADD PRIMARY KEY (`nofactura`),
+  ADD KEY `fk_usuario` (`usuario`),
+  ADD KEY `fk_cliente` (`codcliente`);
+
+--
 -- Indices de la tabla `historial_de_compra`
 --
 ALTER TABLE `historial_de_compra`
   ADD PRIMARY KEY (`id`),
   ADD KEY `usuario_id` (`usuario_id`),
   ADD KEY `producto_id` (`producto_id`);
+
+--
+-- Indices de la tabla `juegos_de_mesa`
+--
+ALTER TABLE `juegos_de_mesa`
+  ADD PRIMARY KEY (`id_juego`);
 
 --
 -- Indices de la tabla `pedidos`
@@ -305,7 +364,15 @@ ALTER TABLE `pedidos`
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_juego` (`id_juego`);
+
+--
+-- Indices de la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  ADD PRIMARY KEY (`codproveedor`),
+  ADD KEY `usuario_id` (`usuario_id`);
 
 --
 -- Indices de la tabla `roles`
@@ -329,13 +396,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `idcliente` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idcliente` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `contactos`
@@ -344,10 +411,22 @@ ALTER TABLE `contactos`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de la tabla `factura`
+--
+ALTER TABLE `factura`
+  MODIFY `nofactura` bigint NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `historial_de_compra`
 --
 ALTER TABLE `historial_de_compra`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
+-- AUTO_INCREMENT de la tabla `juegos_de_mesa`
+--
+ALTER TABLE `juegos_de_mesa`
+  MODIFY `id_juego` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -359,7 +438,13 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+
+--
+-- AUTO_INCREMENT de la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  MODIFY `codproveedor` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -391,6 +476,13 @@ ALTER TABLE `clientes`
   ADD CONSTRAINT `fk_usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `factura`
+--
+ALTER TABLE `factura`
+  ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`codcliente`) REFERENCES `clientes` (`idcliente`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_usuario` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `historial_de_compra`
 --
 ALTER TABLE `historial_de_compra`
@@ -402,6 +494,19 @@ ALTER TABLE `historial_de_compra`
 --
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `fk_id_juego` FOREIGN KEY (`id_juego`) REFERENCES `juegos_de_mesa` (`id_juego`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  ADD CONSTRAINT `proveedor_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `proveedor_ibfk_2` FOREIGN KEY (`codproveedor`) REFERENCES `productos` (`id`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios`

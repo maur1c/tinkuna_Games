@@ -473,3 +473,60 @@ input,select{
 .alert p{
 	padding: 10px;
 }
+/* Estilo base para los botones de Publicar/Despublicar */
+/* Estilo base para los enlaces de los botones */
+.link_publish {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de "Despublicar" */
+.link_publish i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* Cuando el estado es de "Despublicar" */
+.link_publish[href*="estado=0"] {
+    background-color: #f44336; /* Color rojo */
+    color: #fff;
+    border: 1px solid #d32f2f;
+}
+
+.link_publish[href*="estado=0"]:hover {
+    background-color: #e53935;
+    border-color: #c62828;
+    transform: translateY(-2px);
+}
+
+.link_publish[href*="estado=0"]:active {
+    background-color: #d32f2f;
+    border-color: #c62828;
+    transform: translateY(0);
+}
+
+/* Cuando el estado es de "Publicar" */
+.link_publish[href*="estado=1"] {
+    background-color: #4caf50; /* Color verde */
+    color: #fff;
+    border: 1px solid #388e3c;
+}
+
+.link_publish[href*="estado=1"]:hover {
+    background-color: #43a047;
+    border-color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+.link_publish[href*="estado=1"]:active {
+    background-color: #388e3c;
+    border-color: #2e7d32;
+    transform: translateY(0);
+}

@@ -8,10 +8,14 @@ if (!isset($_SESSION['usuario_id'])) {
     exit();
 }
 
-
-// Consultar productos desde la base de datos
-$query = $conn->query("SELECT * FROM productos");
-$productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos
+// Consultar productos desde la base de datos, solo los publicados
+$query = $conn->query("
+    SELECT p.*, j.publicado 
+    FROM productos p 
+    JOIN juegos_de_mesa j ON p.id_juego = j.id_juego
+    WHERE j.publicado = 1
+");
+$productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos publicados
 ?>
 
 <!doctype html>
@@ -91,8 +95,6 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos
           </div>
       </div>
     </footer>
-
-    
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
