@@ -6,6 +6,7 @@ if ($_SESSION['rol_id'] != 1 && $_SESSION['rol_id'] != 2) {
 }
 
 include "conexion.php";
+include "functions.php"; 
 
 if (!empty($_POST)) {
     $alert = '';
