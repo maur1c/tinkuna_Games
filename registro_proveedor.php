@@ -20,10 +20,10 @@ if (!empty($_POST)) {
         $contacto = $_POST['contacto'];
         $telefono = $_POST['telefono'];
         $direccion = $_POST['direccion'];
-        $usuario_id = $_SESSION['rol_id'];  // Corrección realizada aquí
-        
+        $usuario_id = $_SESSION['rol_id'];  // Este valor debería existir en 'proveedor' (no en 'productos')
+
         try {
-            // Consulta con PDO
+            // Realizar la inserción directamente
             $query_insert = $conn->prepare("INSERT INTO proveedor (proveedor, contacto, telefono, direccion, usuario_id)
                                             VALUES (:proveedor, :contacto, :telefono, :direccion, :usuario_id)");
             $query_insert->bindParam(':proveedor', $proveedor);
