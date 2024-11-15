@@ -8,14 +8,18 @@ if (!isset($_SESSION['usuario_id'])) {
     exit();
 }
 
+// Capturar el valor del buscador
+$buscar = isset($_GET['buscar']) ? $_GET['buscar'] : '';
+
 // Consultar productos desde la base de datos, solo los publicados
-$query = $conn->query("
+$query = $conn->prepare("
     SELECT p.*, j.publicado 
     FROM productos p 
     JOIN juegos_de_mesa j ON p.id_juego = j.id_juego
-    WHERE j.publicado = 1
+    WHERE j.publicado = 1 AND p.nombre LIKE :nombre
 ");
-$productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos publicados
+$query->execute([':nombre' => $buscar . '%']);
+$productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos filtrados
 ?>
 
 <!doctype html>
@@ -38,10 +42,13 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
             <li><a href="productos.php">Productos</a></li>
             <li><a href="contacto.php">Contacto</a></li>
             <li class="search-icon">
-              <input type="search" placeholder="Buscar">
-              <label class="icon">
-                <span class="fas fa-search"></span>
-              </label>
+              <!-- Formulario para enviar la búsqueda -->
+              <form method="GET" action="productos.php">
+                <input type="search" name="buscar" placeholder="Buscar" value="<?php echo htmlspecialchars($buscar); ?>">
+                <button type="submit" class="icon">
+                  <span class="fas fa-search"></span>
+                </button>
+              </form>
             </li>
             <li class="car">
               <a href="carrito.php" class="bi bi-cart3"><i class="fas fa-shopping-cart"></i></a>
@@ -54,21 +61,25 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
     <main>
         <h1>Lista de Productos</h1>
         <div class="container-productos" id="lista-productos">
-            <?php foreach ($productos as $producto): ?>
-              <div class="card">
-                <img src="imagenes/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>" class="card-img">
-                <h5><?php echo $producto['nombre']; ?></h5>
-                <p>SKU: <?php echo $producto['descripcion']; ?></p>
-                <p>S/.<small class="precio"><?php echo $producto['precio']; ?></small></p>
+            <?php if (empty($productos)): ?>
+              <p>No se encontraron productos.</p>
+            <?php else: ?>
+              <?php foreach ($productos as $producto): ?>
+                <div class="card">
+                  <img src="imagenes/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>" class="card-img">
+                  <h5><?php echo $producto['nombre']; ?></h5>
+                  <p>SKU: <?php echo $producto['descripcion']; ?></p>
+                  <p>S/.<small class="precio"><?php echo $producto['precio']; ?></small></p>
 
-                <!-- Formulario para agregar producto al carrito -->
-                <form action="carrito.php" method="POST">
-                    <input type="hidden" name="producto_id" value="<?php echo $producto['id']; ?>">
-                    <input type="hidden" name="cantidad" value="1"> <!-- Cantidad por defecto: 1 -->
-                    <button type="submit" class="button agregar-carrito">Comprar</button>
-                </form>
-              </div>
-            <?php endforeach; ?>
+                  <!-- Formulario para agregar producto al carrito -->
+                  <form action="carrito.php" method="POST">
+                      <input type="hidden" name="producto_id" value="<?php echo $producto['id']; ?>">
+                      <input type="hidden" name="cantidad" value="1"> <!-- Cantidad por defecto: 1 -->
+                      <button type="submit" class="button agregar-carrito">Comprar</button>
+                  </form>
+                </div>
+              <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </main>
 
