@@ -31,6 +31,7 @@ include "functions.php";
                 header("location: lista_usuarios.php");
                 exit();
             }
+            //aca definimos los roles q se buscaraan 
 
             // Define los roles que se buscarán
             $rol = '';
