@@ -57,3 +57,4 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['rol_id'] != 2) {
     </main>
 </body>
 </html>
+<!-- termina el codigo vendedor -->
