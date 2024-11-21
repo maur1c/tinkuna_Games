@@ -6,101 +6,7 @@
     <title>Mockup Tinkuna Games</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/estilos.css">
-
-    <style>
-        /* Estilos personalizados */
-        .banner {
-            position: relative;
-            background-image: url(../imag/Ark Nova.jpg); /* Ruta a la imagen de fondo */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            color: white;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .banner-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Efecto de superposición */
-        }
-        .banner-content {
-            position: relative;
-            z-index: 2;
-        }
-        .banner h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-        .banner p {
-            font-size: 1.2rem;
-            margin-top: 15px;
-        }
-        .banner-buttons a {
-            margin: 10px;
-        }
-
-        /* Botones grandes con fondo */
-        .large-buttons {
-            margin: 50px 0;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        .large-button {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            text-align: center;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .large-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-        }
-        .large-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Oscurecimiento */
-            z-index: 1;
-        }
-        .large-button span {
-            position: relative;
-            z-index: 2;
-            font-size: 1.5rem;
-        }
-
-        /* Fondos específicos para cada botón */
-        .btn-juegos {
-            background-image: url('juegos.jpg'); /* Ruta a imagen de Juegos de Mesa */
-        }
-        .btn-accesorios {
-            background-image: url(../imag/logo2.jpeg); /* Ruta a imagen de Accesorios */
-        }
-        .btn-eventos {
-            background-image: url('eventos.jpg'); /* Ruta a imagen de Eventos */
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/estilos.css"> <!-- CSS personalizado -->
 </head>
 <body>
     <!-- Navbar -->
@@ -161,7 +67,6 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="container my-5">
  
   <!-- Botones de filtros -->
   <div class="text-center mb-4">
