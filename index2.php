@@ -67,55 +67,83 @@
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
- 
-  <!-- Botones de filtros -->
-  <div class="text-center mb-4">
-    <div class="btn-group" role="group" aria-label="Filtros de Productos">
-      <button type="button" class="btn btn-outline-primary active">Todos</button>
-      <button type="button" class="btn btn-outline-primary">Juegos de Mesa</button>
-      <button type="button" class="btn btn-outline-primary">Juegos de Cartas</button>
-      <button type="button" class="btn btn-outline-primary">Estrategia</button>
-      <button type="button" class="btn btn-outline-primary">Gestión de Recursos</button>
-      <button type="button" class="btn btn-outline-primary">Temáticos</button>
-    </div>
-  </div>
 
-  <!-- Tarjetas de productos -->
-  <div class="row">
-    <!-- Tarjeta 1 -->
-    <div class="col-md-3 col-sm-6 mb-4">
-      <div class="card">
-        <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Catan">
-        <div class="card-body text-center">
-          <h5 class="card-title">CATAN</h5>
-          <p class="card-text">
-            <span class="badge bg-warning text-dark">Juego de Mesa, Estrategia</span><br>
-            Lorem ipsum dolor sit amet.
-          </p>
+  <section id="productos" class="productos py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Botones de filtros -->
+            <div class="text-center mb-4">
+            <div class="btn-group" role="group" aria-label="Filtros de Productos">
+               <button type="button" class="btn btn-outline-primary active">Todos</button>
+               <button type="button" class="btn btn-outline-primary">Juegos de Mesa</button>
+               <button type="button" class="btn btn-outline-primary">Juegos de Cartas</button>
+               <button type="button" class="btn btn-outline-primary">Estrategia</button>
+               <button type="button" class="btn btn-outline-primary">Gestión de Recursos</button>
+               <button type="button" class="btn btn-outline-primary">Temáticos</button>
+              </div>
+             </div>
+            <!-- Tarjeta de Producto -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjetas adicionales duplicando esta estructura -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto.</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <!-- Tarjeta 2 -->
-    <div class="col-md-3 col-sm-6 mb-4">
-      <div class="card">
-        <img src="assets\imag\zombicide.jpg" class="card-img-top" alt="zombicide">
-        <div class="card-body text-center">
-          <h5 class="card-title">zombicide</h5>
-          <p class="card-text">
-            <span class="badge bg-warning text-dark">Juego de Mesa</span><br>
-            Lorem ipsum dolor sit amet.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Tarjetas adicionales aquí -->
-  </div>
-
-  <!-- Botón de navegación -->
-  <div class="text-center mt-4">
+    <!-- Botón de navegación -->
+    <div class="text-center mt-4">
     <button class="btn btn-primary btn-lg">Todos los Juegos</button>
   </div>
- </div>
+  </section>
+
+  <!-- Botón de navegación -->
+ 
  <section class="buscar-juego">
   <!-- Navegador de búsqueda -->
   <div class="container-fluid bg-orange py-4">
@@ -157,7 +185,7 @@
   </div>
  </section>
 
- <section class="banner-publicitario my-5">
+ <section class="blog-highlight my-5">
   <div class="banner-container position-relative">
     <!-- Imagen de fondo -->
     <div class="banner-fondo"></div>
@@ -165,7 +193,7 @@
     <div class="container position-relative text-white py-5">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <img src="assets\imag\zombicide.jpg" alt="Ark Nova" class="img-fluid banner-img">
+          <img src="assets/imag/zombicide.jpg" alt="Zombicide" class="img-fluid banner-img">
         </div>
         <div class="col-md-6">
           <h3 class="text-uppercase fw-bold">Explorando <span class="text-warning">zombicide</span></h3>
@@ -176,7 +204,5 @@
     </div>
   </div>
  </section>
-
-
 </body>
 </html>
