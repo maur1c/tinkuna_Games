@@ -1,8 +1,138 @@
-/* Encabezado y Navegación */
-.navbar {
-    width: 100%; /* Ajuste fluido */
-    height: 85px; /* Altura ajustada */
-}
+ /* Estilo del encabezado 
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }*/
+  
+ /* Agrega un color de texto para el navbar */
+ .navbar-light .navbar-brand, .navbar-light .nav-link {
+    color: #333 !important;  /*Asegúrate de que se vea bien */
+  }
+  
+  /* Si deseas personalizar el logo */
+  .logo {
+    font-weight: bold;
+    color: black; /* Color llamativo */
+  }
+  
+  /* Cambiar el color cuando pasas el ratón por encima */
+  .navbar-light .nav-link:hover {
+    color: #FF9800; /* Color para los enlaces al pasar el ratón */
+  }
+  /*index boostrap*/
+  
+  .navbar .logo {
+    background-color: #ff6600;
+    padding: 5px 15px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  
+  .navbar .nav-link {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ff6600;
+  }
+  
+  
+  .navbar .car svg {
+    fill: #ff6600;
+    transition: fill 0.3s ease;
+  }
+  
+  .navbar .car svg:hover {
+    fill: #000;
+  }
+  
+  
+  .navbar .car {
+    margin-right: 15px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  /*index boostrapfinish*/
+  
+  
+  .btn-outline-primary {
+    border-color: #ff5722;        /* Borde naranja */
+    color: #ff5722;               /* Texto naranja */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #ff5722;    /* Fondo naranja al pasar el mouse */
+    color: white;                 /* Texto blanco al pasar el mouse */
+  }
+  
+  /* Estilo general del navbar */
+  .logo-nav {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px 20px;
+    background-color: #ff5722; /* Fondo naranja para el navbar */
+  }
+  
+  /* Estilo del logo */
+  .logo {
+    font-weight: bold;             /* Negrita para destacar el logo */
+    font-size: 1.5rem;             /* Tamaño del texto */
+    color: white !important;       /* Cambia las letras a color blanco */
+    text-decoration: none;         /* Elimina el subrayado del enlace */
+  }
+  
+  /* Botón del menú responsive */
+  .navbar-toggler {
+    border-color: white;           /* Cambia el color del borde del botón */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Usa el ícono predeterminado de Bootstrap */
+  }
+  
+  /* Estilo de los enlaces del navbar */
+  .navbar-nav .nav-link {
+    font-weight: normal;           /* Elimina las negritas */
+    color: black !important;       /* Texto blanco */
+    text-transform: uppercase;     /* Mayúsculas para un toque profesional */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffe0b2;                /* Cambia el color al pasar el mouse */
+    text-decoration: underline;    /* Subraya el texto al pasar el mouse */
+  }
+  
+  /* Botón del carrito */
+  .btn-outline-primary {
+    border-color: white;           /* Borde blanco */
+    color: white;                  /* Texto blanco */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: white;       /* Fondo blanco al pasar el mouse */
+    color: #ff5722;                /* Texto naranja */
+  }
+
+  /* Botones de filtro */
+  .btn-outline-primary {
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+  }
+  
+  .btn-outline-primary.active {
+    background-color: #ff9800;
+    color: white;
+    border-color: #ff9800;
+  }
 
 /* Banner Principal */
 .banner {
@@ -43,29 +173,31 @@
 
 /* Botones Grandes */
 .large-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
     margin: 50px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 .large-button {
-    width: 380px; /* Tamaño ajustado */
+    position: relative;
+    width: 380px;
     height: 380px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    position: relative;
-    color: white;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .large-button:hover {
     transform: scale(1.05);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 .large-button::after {
     content: '';
@@ -74,8 +206,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Manteniendo opacidad original */
+    background: rgba(0, 0, 0, 0.5); /* Oscurecimiento */
     z-index: 1;
+}
+.large-button span {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
 }
 .btn-juegos {
     background-image: url('../imag/juegos.jpg');
@@ -215,6 +352,115 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Contenedor principal del footer */
+.footer-container {
+    background-color: #212121; /* Color de fondo oscuro */
+    color: #f8f9fa; /* Color de texto claro */
+    padding: 3rem 0; /* Padding para el footer */
+  }
+  
+  /* Títulos del footer */
+  .footer-container h5 {
+    font-weight: bold;
+    color: #ffc107; /* Color amarillo */
+    margin-bottom: 15px;
+  }
+  
+  .footer-container h6 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  /* Imagenes del footer */
+  .footer-container img {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Párrafos del footer */
+  .footer-container p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* Listas personalizadas */
+  .footer-container ul.custom-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .footer-container ul.custom-list li {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px; /* Espacio para el ícono */
+  }
+  
+  .footer-container ul.custom-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid #ffc107; /* Triángulo apuntando a la derecha, color naranja */
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  
+  /* Flexbox para alinear ambas listas en la columna 1 */
+  .footer-container .col-md-4 .d-flex {
+    display: flex;
+    justify-content: space-between; /* Esto separa las dos listas */
+  }
+  
+  .footer-container .col-md-4 ul.custom-list {
+    margin-right: 200px; /* Ajuste del margen para acercar las listas */
+  }
+  
+  /* Estilos para el mini footer */
+  /* Mini Footer */
+  .footer-mini-container {
+    background-color: #212121;
+    color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Para la columna de "TINKUNA games" */
+  .footer-mini-container .footer-mini-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107;
+    margin: 0;
+    display: inline-block;
+    text-align: left;  /* Alineación izquierda */
+  }
+  
+  /* Para el copyright alineado a la derecha */
+  .footer-mini-container .copyright {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+    display: inline-block;
+    text-align: right; /* Alineación derecha */
+  }
+  
+  /* Aseguramos que los elementos se distribuyan bien en el mini footer */
+  .footer-mini-container .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-mini-container .footer-mini-text span {
+    color: #ffc107; /* Color amarillo para la palabra "games" */
+  }
 
 /* Media Queries */
 @media (max-width: 768px) {
