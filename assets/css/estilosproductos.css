@@ -1,0 +1,321 @@
+ 
+  
+  /* Cambiar el color cuando pasas el ratón por encima */
+  .navbar-light .nav-link:hover {
+    color: #FF9800; /* Color para los enlaces al pasar el ratón */
+  }
+  /*index boostrap*/
+  
+  .navbar .logo {
+    background-color: #ff6600;
+    padding: 5px 15px;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  
+  .navbar .nav-link {
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ff6600;
+  }
+  
+  
+  .navbar .car svg {
+    fill: #ff6600;
+    transition: fill 0.3s ease;
+  }
+  
+  .navbar .car svg:hover {
+    fill: #000;
+  }
+  
+  
+  .navbar .car {
+    margin-right: 15px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  /*index boostrapfinish*/
+  
+  
+  
+  /* Estilo general del navbar */
+  .logo-nav {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px 20px;
+    background-color: #ff5722; /* Fondo naranja para el navbar */
+  }
+  
+
+  /* Logo destacado */
+.navbar .logo {
+  color: #ff6600; /* Naranja para destacar */
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+  
+  /* Botón del menú responsive */
+  .navbar-toggler {
+    border-color: white;           /* Cambia el color del borde del botón */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Usa el ícono predeterminado de Bootstrap */
+  }
+  
+  /* Estilo de los enlaces del navbar */
+  .navbar-nav .nav-link {
+    font-weight: normal;           /* Elimina las negritas */
+    color: black !important;       /* Texto blanco */
+    text-transform: uppercase;     /* Mayúsculas para un toque profesional */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ffe0b2;                /* Cambia el color al pasar el mouse */
+    text-decoration: underline;    /* Subraya el texto al pasar el mouse */
+  }
+  
+  /* Botón del carrito */
+  .btn-outline-primary {
+    border-color: white;           /* Borde blanco */
+    color: white;                  /* Texto blanco */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: white;       /* Fondo blanco al pasar el mouse */
+    color: #ff5722;                /* Texto naranja */
+  }
+
+
+/* Contenedor principal del footer */
+.footer-container {
+    background-color: #212121; /* Color de fondo oscuro */
+    color: #f8f9fa; /* Color de texto claro */
+    padding: 3rem 0; /* Padding para el footer */
+  }
+  
+  /* Títulos del footer */
+  .footer-container h5 {
+    font-weight: bold;
+    color: #ffc107; /* Color amarillo */
+    margin-bottom: 15px;
+  }
+  
+  .footer-container h6 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  /* Imagenes del footer */
+  .footer-container img {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Párrafos del footer */
+  .footer-container p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* Listas personalizadas */
+  .footer-container ul.custom-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .footer-container ul.custom-list li {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px; /* Espacio para el ícono */
+  }
+  
+  .footer-container ul.custom-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid #ffc107; /* Triángulo apuntando a la derecha, color naranja */
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  
+  /* Flexbox para alinear ambas listas en la columna 1 */
+  .footer-container .col-md-4 .d-flex {
+    display: flex;
+    justify-content: space-between; /* Esto separa las dos listas */
+  }
+  
+  .footer-container .col-md-4 ul.custom-list {
+    margin-right: 200px; /* Ajuste del margen para acercar las listas */
+  }
+  
+  /* Estilos para el mini footer */
+  /* Mini Footer */
+  .footer-mini-container {
+    background-color: #212121;
+    color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Para la columna de "TINKUNA games" */
+  .footer-mini-container .footer-mini-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107;
+    margin: 0;
+    display: inline-block;
+    text-align: left;  /* Alineación izquierda */
+  }
+  
+  /* Para el copyright alineado a la derecha */
+  .footer-mini-container .copyright {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+    display: inline-block;
+    text-align: right; /* Alineación derecha */
+  }
+  
+  /* Aseguramos que los elementos se distribuyan bien en el mini footer */
+  .footer-mini-container .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-mini-container .footer-mini-text span {
+    color: #ffc107; /* Color amarillo para la palabra "games" */
+  }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+    .banner p {
+        font-size: 0.9rem;
+    }
+    .banner-buttons a {
+        font-size: 0.8rem;
+    }
+    .large-button {
+        width: 90%; /* Tamaño responsivo */
+    }
+    .buscar-juego input,
+    .buscar-juego select {
+        width: 100%;
+    }
+}
+
+
+
+/*productos-card*/
+.container-productos{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  background-color: white;
+  
+}
+.container-productos .card{
+  width: 260px;
+  height: 390px;
+  background: white;
+  color:black;
+  border-radius: 8px;
+  border:1px solid  #DF691A;
+  box-shadow: rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  transition: all 0.25s;
+}
+.container-productos .card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+.container-productos .card img{
+  width: 260px;
+  height: 190px;
+  cursor: pointer;
+}
+.container-productos .card h5{
+  font-weight: 600;
+  padding: 5px;
+}
+.container-productos .card p{
+  padding-top: 5px;
+}
+.container-productos .card a{
+  padding:10px;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+/*contenido*/
+.container{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.precio {
+  color: #ff6600; /* Naranja */
+  font-weight: bold; /* Negritas */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+/* Estilo para el botón "Comprar" */
+button.button.agregar-carrito {
+  background-color: #ff6600; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover (al pasar el cursor) */
+button.button.agregar-carrito:hover {
+  background-color: #e65c00; /* Fondo más oscuro */
+}
+
+
+
+
+
+
+
+
+
