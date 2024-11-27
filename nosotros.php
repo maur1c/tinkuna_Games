@@ -79,6 +79,41 @@
     font-size: 1rem;
     font-weight:500;
   }
+
+  v/* Estilo para el logo */
+.logo {
+  color: white; /* Texto blanco */
+  background-color: orange; /* Fondo naranja */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Cambiar estilo del logo al pasar el mouse */
+.logo:hover {
+  background-color: darkorange; /* Fondo más oscuro al pasar el mouse */
+  color: white; /* Asegurar que el texto permanezca blanco */
+}
+
+/* Estilo para los enlaces del navbar */
+.nav-link {
+  color: white !important; /* Texto blanco */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Cambiar color de los enlaces al pasar el mouse */
+
+/* Fondo de navbar claro con contraste */
+
+/* Estilo del botón del carrito */
+.btn-outline-primary:hover {
+
+  color: white; /* Texto blanco */
+}
+
     </style>
 
 <style>
