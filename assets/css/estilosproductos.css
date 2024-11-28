@@ -6,7 +6,11 @@
   }
   /*index boostrap*/
   
+<<<<<<< HEAD
   .navbar .lnavbar-brand logo {
+=======
+  .navbar .logo {
+>>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
     background-color: #ff6600;
     padding: 5px 15px;
     color: black;
@@ -97,6 +101,7 @@
   }
 
 
+<<<<<<< HEAD
 /* Contenedor principal del footer */
 .footer-container {
     background-color: #212121; /* Color de fondo oscuro */
@@ -206,6 +211,8 @@
     color: #ffc107; /* Color amarillo para la palabra "games" */
   }
 
+=======
+>>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 /* Media Queries */
 @media (max-width: 768px) {
     .banner h1 {
@@ -311,6 +318,7 @@ button.button.agregar-carrito:hover {
   background-color: #e65c00; /* Fondo más oscuro */
 }
 
+<<<<<<< HEAD
 
 
 
@@ -319,3 +327,5 @@ button.button.agregar-carrito:hover {
 
 
 
+=======
+>>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0

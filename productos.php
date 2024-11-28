@@ -30,6 +30,10 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
     <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
     <link href="assets/css/estilosproductos.css" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
+>>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -165,6 +169,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
 
 
 
+<<<<<<< HEAD
 
 
 <style>
@@ -202,6 +207,8 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
     }
   </style>
 
+=======
+>>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
   </head>
   <body>
   <header>
@@ -264,6 +271,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
   <input type="text" placeholder="Apellido" class="input-field">
   <button class="subscribe-button">Suscribirse</button>
 </div>
+<<<<<<< HEAD
 
 <div class="social-icons">
     <a href="https://www.facebook.com/TinkunaGames" class="social-icon" target="_blank">
@@ -280,6 +288,28 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
     </a>
   </div>
 
+=======
+  <!-- Footer Social -->
+  <footer class="footer">
+    <div class="social-icons">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61562278854386" target="_blank" class="social-link">
+        <img src="assets\imag\facebook-svgrepo-com.svg" alt="Facebook" class="icon">
+        <span>Facebook</span>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/elpobladobtg/" target="_blank" class="social-link">
+        <img src="assets\imag\instagram-167-svgrepo-com.svg" alt="Instagram" class="icon">
+        <span>Instagram</span>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@el.poblado.by.tin" target="_blank" class="social-link">
+        <img src="assets\imag\tiktok-svgrepo-com.svg" alt="TikTok" class="icon">
+        <span>TikTok</span>
+      </a>
+    </div>
+  </footer>
+>>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 
     <footer class="footer-container">
         <div class="container">
