@@ -4,44 +4,235 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros</title>
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <link href="assets/css/estilosproductos.css" rel="stylesheet" type="text/css">
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/estilos.css"> <!-- CSS personalizado -->
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      /* Estilo para el header con imagen de fondo */
+      header {
+        position: relative;
+        background-image: url('assets//imag/UI3.jpg'); /* Sustituye esta URL por la imagen que desees */
+        background-size: cover;
+        background-position: center;
+        height: 280px; /* Puedes ajustar la altura */
+        color: white;
+      }
+
+      /* Estilo para el contenido dentro del header */
+      .header-content {
+        position: relative;
+        top: 45%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 20; /* Asegura que el texto esté encima del fondo */
+      }
+
+      .header-title {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+
+      .header-subtitle {
+        font-size: 1.5rem;
+      }
+.custom-navbar {
+  backdrop-filter: blur(5px); /* Efecto suave */
+  z-index: 10;
+}
+
+
+.navbar .nav-link:hover {
+  color: #ff6600; /* Color anaranjado para hover */
+}
+
+/* Logo destacado */
+.navbar .logo {
+  color: #ff6600; /* Naranja para destacar */
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+/* Botón hamburguesa */
+.navbar-toggler {
+  border: none; /* Sin borde */
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Blanco para ícono */
+}
+
+/* Botón de carrito */
+.btn-outline-primary {
+  border-color: #ff6600;
+  color: #ff6600;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff6600;
+  color: white;
+}
+.navbar .nav-link {
+    color:white;
+    font-size: 1rem;
+    font-weight:500;
+  }
+
+  v/* Estilo para el logo */
+.logo {
+  color: white; /* Texto blanco */
+  background-color: orange; /* Fondo naranja */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 24px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Cambiar estilo del logo al pasar el mouse */
+.logo:hover {
+  background-color: darkorange; /* Fondo más oscuro al pasar el mouse */
+  color: white; /* Asegurar que el texto permanezca blanco */
+}
+
+/* Estilo para los enlaces del navbar */
+.nav-link {
+  color: white !important; /* Texto blanco */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Cambiar color de los enlaces al pasar el mouse */
+
+/* Fondo de navbar claro con contraste */
+
+/* Estilo del botón del carrito */
+.btn-outline-primary:hover {
+
+  color: white; /* Texto blanco */
+}
+
+    </style>
+
+<style>
+    .subscription-row {
+      display: flex; /* Alinear los elementos en una fila */
+      align-items: center; /* Centrar verticalmente */
+      gap:150px; /* Espacio entre los elementos */
+      background-color: orange; /* Fondo naranja para la fila */
+      padding: 50px;
+      
+    }
+
+    .subscribe-text {
+      
+      color: white; /* Texto blanco */
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .input-field {
+      border: 2px solid white; /* Borde blanco */
+      background-color: orange; /* Fondo naranja */
+      color: white; /* Texto blanco */
+      padding: 10px;
+      border-radius: 5px; /* Bordes redondeados */
+      font-size: 1rem;
+      outline: none; /* Quitar el borde azul al enfocar */
+      width: 350px; /* Ancho predeterminado */
+    }
+
+    .input-field::placeholder {
+      color: white; /* Color blanco para el placeholder */
+      opacity: 0.7; /* Un poco más tenue */
+    }
+
+    .subscribe-button {
+      background-color: white; /* Fondo blanco */
+      color: orange; /* Texto naranja */
+      padding:  10px;
+      border: 2px solid orange; /* Borde naranja */
+      border-radius: 5px; /* Bordes redondeados */
+      font-size: 1rem;
+      cursor: pointer; /* Cambiar a cursor de mano */
+      font-weight: bold;
+    }
+
+    .subscribe-button:hover {
+      background-color: orange; /* Fondo naranja al pasar el mouse */
+      color: white; /* Texto blanco */
+      transition: 0.3s; /* Suavizar la transición */
+    }
+  </style>
+
+
+
+
+
+<style>
+    /* Asegura que el body ocupe toda la pantalla */
+   
+
+   
+
+    /* Estilo para la fila de íconos de redes sociales */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* Espacio entre los íconos */
+      padding: 100px;
+    }
+
+    .social-icon {
+      text-align: center;
+      color: orange; /* Iconos de color naranja */
+      font-size: 40px; /* Tamaño del icono */
+      cursor: pointer; /* Cursor de mano */
+      transition: color 0.3s ease; /* Transición suave para cambio de color */
+    }
+
+    .social-icon:hover {
+      color: #f39c12; /* Color más oscuro al pasar el mouse */
+    }
+
+    /* Estilo para los nombres debajo de los iconos */
+    .social-name {
+      color: orange; /* Nombre en naranja */
+      margin-top: 5px; /* Separación entre el icono y el texto */
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+
+
 </head>
 <body>
   <header>
     <!--codigo moodificado navabar de index.php-->
   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light logo-nav">
-  <div class="container-fluid">
-    <!-- Logo con fondo naranja -->
-    <a href="index.php" class="navbar-brand logo">TINKUNAGAMES</a>
-    <!-- Botón del menú responsive -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Contenido del navbar -->
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <!-- Enlaces principales alineados a la izquierda -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link" href="">Blog</a></li>
-      </ul>
-      <!-- Carrito alineado a la derecha -->
-      <div class="navbar-nav ms-auto">
-        <a href="carrito.php" class="btn btn-outline-primary ms-2">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container-fluid">
+      <a href="index.php" class="navbar-brand logo">TINKUNAGAMES</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
+</ul>
+        <a href="carrito.php" class="btn btn-outline-primary ms-2"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
+  </nav>
+<div class="header-content">
+    <h1 class="header-title">NOSOTROS</h1>
+    <p class="header-subtitle">Tinkuna Games</p>
   </div>
-</nav>
   </header>
 
 <main>
@@ -60,6 +251,29 @@
     </div>
 </div>
 </main>
+
+<div class="subscription-row">
+  <span class="subscribe-text">SUSCRIBETE</span>
+  <input type="text" placeholder="Correo" class="input-field">
+  <input type="text" placeholder="Nombre" class="input-field">
+  <input type="text" placeholder="Apellido" class="input-field">
+  <button class="subscribe-button">Suscribirse</button>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.facebook.com/TinkunaGames" class="social-icon" target="_blank">
+      <i class="fab fa-facebook"></i>
+      <div class="social-name">Facebook</div>
+    </a>
+    <a href="https://www.instagram.com/TinkunaGames" class="social-icon" target="_blank">
+      <i class="fab fa-instagram"></i>
+      <div class="social-name">Instagram</div>
+    </a>
+    <a href="https://www.tiktok.com/@TinkunaGames" class="social-icon" target="_blank">
+      <i class="fab fa-tiktok"></i>
+      <div class="social-name">TikTok</div>
+    </a>
+  </div>
 
 <footer class="footer-container">
         <div class="container">

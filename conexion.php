@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db = 'tinkuna_games';
 $user = 'root';  // Usuario por defecto de XAMPP
-$password = 'oliver123';  // Contraseña por defecto en XAMPP es vacía
+$password = '';  // Contraseña por defecto en XAMPP es vacía
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $password);
