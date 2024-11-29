@@ -29,6 +29,7 @@ img{
     text-decoration: none;
     background-color: #9a4912;
     color: #f2f2f2;
+<<<<<<< HEAD
 
 
 
@@ -83,6 +84,12 @@ header{
   }
 
 /*
+=======
+}
+
+
+/*menu*/
+>>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
 header{
     background:#CE8B27;
     color:#f2f2f2;
@@ -165,7 +172,11 @@ header a{
     position: relative;
 }
 
+<<<<<<< HEAD
 /*menu-carrito
+=======
+/*menu-carrito*/
+>>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
 .dropdown-menu{
     position: absolute;
     top: 100%;
@@ -310,6 +321,7 @@ main{
 
 
 /*contacto*/
+<<<<<<< HEAD
 .container-contacto h2 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -384,6 +396,45 @@ main{
     border: none;
     border-radius: 10px;
     margin-top: 20px;
+=======
+.container-contacto{
+    background-image: url("../imag/logo2.jpeg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin:0;
+    padding: 6rem 0;
+}
+.container-contacto form{
+   
+    width: 450px;
+    margin:auto;
+    background:rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}  
+.container-contacto form h2{
+    color: #f2f2f2;
+    text-align: center;
+    margin:0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.container-contacto form input,textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border:none;
+}
+.container-contacto form textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+>>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
 }
 
 
@@ -681,7 +732,11 @@ main{
 
 @media (max-width: 800px) {
 
+<<<<<<< HEAD
     /*menu
+=======
+    /*menu*/
+>>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
     .menu-icon{
         display: block;
         cursor: pointer;
@@ -712,11 +767,19 @@ main{
         height: auto;
     }
 
+<<<<<<< HEAD
     /*menu-carrito
     .dropdown-menu{
         left: 0;
         height: 250px;
     }*/
+=======
+    /*menu-carrito*/
+    .dropdown-menu{
+        left: 0;
+        height: 250px;
+    }
+>>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
 
 
     /*slider*/
@@ -820,6 +883,7 @@ a:hover {
 /*************estilos de conf_paipay.php*********************/ 
 
 
+<<<<<<< HEAD
 /* Estilo del encabezado */
 .section-title {
     font-size: 2.5rem;
@@ -962,3 +1026,5 @@ a:hover {
   
   
 /*index boostrapfinish*/
+=======
+>>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
