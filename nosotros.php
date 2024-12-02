@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros</title>
-<<<<<<< HEAD
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
   <link href="assets/css/estilosproductos.css">
   <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
@@ -87,28 +87,32 @@
     .subscription-row {
       display: flex; /* Alinear los elementos en una fila */
       align-items: center; /* Centrar verticalmente */
-      gap:150px; /* Espacio entre los elementos */
-      background-color: orange; /* Fondo naranja para la fila */
-      padding: 50px;
-      
+      justify-content: center; /* Centrar horizontalmente */
+      gap:10px; /* Espacio entre los elementos */
+      background-image: url('imagenes/Img_Paralax.png'); /* Aquí debes poner la URL de tu imagen */
+      background-size: cover; /* Asegura que la imagen cubra todo el área */
+      background-position: center; /* Centra la imagen */
+      padding: 20px;
+      min-height: 180px; /* Asegura que haya suficiente altura */
+      text-align: center; /* Centra el texto dentro del contenedor */
     }
 
     .subscribe-text {
-      
       color: white; /* Texto blanco */
       font-size: 1.3rem;
       font-weight: bold;
+      flex-basis: 10%; /* Asegura que ocupe toda la línea */
     }
 
     .input-field {
       border: 2px solid white; /* Borde blanco */
-      background-color: orange; /* Fondo naranja */
+      background-color: transparent; /* Fondo completamente transparente */
       color: white; /* Texto blanco */
       padding: 10px;
       border-radius: 5px; /* Bordes redondeados */
       font-size: 1rem;
       outline: none; /* Quitar el borde azul al enfocar */
-      width: 350px; /* Ancho predeterminado */
+      width: 325px; /* Ancho predeterminado */
     }
 
     .input-field::placeholder {
@@ -119,7 +123,7 @@
     .subscribe-button {
       background-color: white; /* Fondo blanco */
       color: orange; /* Texto naranja */
-      padding:  10px;
+      padding: 10px;
       border: 2px solid orange; /* Borde naranja */
       border-radius: 5px; /* Bordes redondeados */
       font-size: 1rem;
@@ -132,7 +136,8 @@
       color: white; /* Texto blanco */
       transition: 0.3s; /* Suavizar la transición */
     }
-  </style>
+</style>
+
 
 </head>
 <body>
@@ -160,35 +165,13 @@
     <h1 class="header-title">NOSOTROS</h1>
     <p class="header-subtitle">Tinkuna Games</p>
   </div>
-=======
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <header>
-    <div class="menu logo-nav">
-      <a href="index.php" class="logo">TINKUNAGAMES</a>
-      <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
-      <nav class="navigation">
-        <ul>
-          <li><a href="nosotros.php">Nosotros</a></li>
-          <li><a href="productos.php">Productos</a></li>
-          <li><a href="contacto.php">Contacto</a></li>
-          <li class="car"><a href="carrito.php" >
-            <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-            </svg></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
->>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
+
   </header>
 
 <main>
 <div class="container">
     <div class="columna1">
-      <h2>Nosotros</h2>
+      <h2>LOREM IPSUM </h2>
       <p>
         <p>TinkunaGames es una tienda virtual, aquí te vas a encontrar muchísima variedad de productos para tu divercion.  
         </p><br>
@@ -196,13 +179,9 @@
         <p>La creación de una comunidad de clientes leales ha ayudado a TinkunaGames a crecer y convertirse en la empresa que somos ahora. No solo somos una tienda virtual.</p><br>
       </p>
     </div>
-    <div class="columna2">
-      <img src="assets\imag\fondo1.jpeg">
-    </div>
-</div>
+    
 </main>
 
-<<<<<<< HEAD
 <div class="subscription-row">
   <span class="subscribe-text">SUSCRIBETE</span>
   <input type="text" placeholder="Correo" class="input-field">
@@ -319,35 +298,7 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-=======
-<footer class="footer-section">
-  <div class="copyright-area">
-      <div class="container-footer">
-          <div class="row-footer">
-              <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                  <div class="copyright-text">
-                      <p>TinkunaGames &copy; 2024, todos los derechos reservados <a href="index.php">TinkunaGames</a></p>
-                  </div>
-              </div>
-              <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                  <div class="footer-menu">
-                      <ul>
-                        <li><a href="https://www.facebook.com/profile.php?id=61562278854386" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/elpobladobtg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://www.tiktok.com/@el.poblado.by.tin" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a></li>
-                        <li><a href="https://wa.me/+59177958996" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</footer> 
 
-
->>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
