@@ -1,5 +1,12 @@
  
   
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+  }
+
   /* Cambiar el color cuando pasas el ratón por encima */
   .navbar-light .nav-link:hover {
     color: #FF9800; /* Color para los enlaces al pasar el ratón */

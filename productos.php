@@ -28,7 +28,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-<<<<<<< HEAD
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
     <link href="assets/css/estilosproductos.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
@@ -200,40 +200,6 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
 </header>
 
     <main>
-=======
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <header>
-      <div class="menu logo-nav">
-        <a href="index.php" class="logo">TINKUNAGAMES</a>
-        <label class="menu-icon"><span class="fas fa-bars icomin"></span></label>
-        <nav class="navigation">
-          <ul>
-            <li><a href="nosotros.php">Nosotros</a></li>
-            <li><a href="productos.php">Productos</a></li>
-            <li><a href="contacto.php">Contacto</a></li>
-            <li class="search-icon">
-              <!-- Formulario para enviar la búsqueda -->
-              <form method="GET" action="productos.php">
-                <input type="search" name="buscar" placeholder="Buscar" value="<?php echo htmlspecialchars($buscar); ?>">
-                <button type="submit" class="icon">
-                  <span class="fas fa-search"></span>
-                </button>
-              </form>
-            </li>
-            <li class="car">
-              <a href="carrito.php" class="bi bi-cart3"><i class="fas fa-shopping-cart"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-        <h1>Lista de Productos</h1>
->>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
         <div class="container-productos" id="lista-productos">
             <?php if (empty($productos)): ?>
               <p>No se encontraron productos.</p>
@@ -256,7 +222,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
             <?php endif; ?>
         </div>
     </main>
-<<<<<<< HEAD
+
     <div class="subscription-row">
   <span class="subscribe-text">SUSCRIBETE</span>
   <input type="text" placeholder="Correo" class="input-field">
@@ -373,33 +339,9 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-=======
 
-    <footer class="footer-section">
-      <div class="copyright-area">
-          <div class="container-footer">
-              <div class="row-footer">
-                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                      <div class="copyright-text">
-                          <p>TinkunaGames &copy; 2024, todos los derechos reservados <a href="index.php">TinkunaGames</a></p>
-                      </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                      <div class="footer-menu">
-                          <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=61562278854386" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
-                            <li><a href="https://www.instagram.com/elpobladobtg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
-                            <li><a href="https://www.tiktok.com/@el.poblado.by.tin" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i> TikTok</a></li>
-                            <li><a href="https://wa.me/+59177958996" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </footer>
 
->>>>>>> 8ab0643a6ec8047642fae0b2dddd2a324a4c4ca7
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
