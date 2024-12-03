@@ -5,12 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
-<<<<<<< HEAD
-    <link href="assets/css/estilosproductos.css" rel="stylesheet" type="text/css">
-=======
   <link href="assets/css/estilosproductos.css">
   <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -84,44 +80,6 @@
     font-size: 1rem;
     font-weight:500;
   }
-<<<<<<< HEAD
-
-  v/* Estilo para el logo */
-.logo {
-  color: white; /* Texto blanco */
-  background-color: orange; /* Fondo naranja */
-  padding: 10px 15px; /* Espaciado interno */
-  font-size: 24px; /* Tamaño de la fuente */
-  font-weight: bold; /* Negrita */
-  text-transform: uppercase; /* Texto en mayúsculas */
-  border-radius: 5px; /* Bordes redondeados */
-  text-decoration: none; /* Sin subrayado */
-}
-
-/* Cambiar estilo del logo al pasar el mouse */
-.logo:hover {
-  background-color: darkorange; /* Fondo más oscuro al pasar el mouse */
-  color: white; /* Asegurar que el texto permanezca blanco */
-}
-
-/* Estilo para los enlaces del navbar */
-.nav-link {
-  color: white !important; /* Texto blanco */
-  font-size: 16px; /* Tamaño de la fuente */
-}
-
-/* Cambiar color de los enlaces al pasar el mouse */
-
-/* Fondo de navbar claro con contraste */
-
-/* Estilo del botón del carrito */
-.btn-outline-primary:hover {
-
-  color: white; /* Texto blanco */
-}
-
-=======
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
     </style>
 
 <style>
@@ -175,49 +133,6 @@
     }
   </style>
 
-<<<<<<< HEAD
-
-
-
-
-<style>
-    /* Asegura que el body ocupe toda la pantalla */
-   
-
-   
-
-    /* Estilo para la fila de íconos de redes sociales */
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 30px; /* Espacio entre los íconos */
-      padding: 100px;
-    }
-
-    .social-icon {
-      text-align: center;
-      color: orange; /* Iconos de color naranja */
-      font-size: 40px; /* Tamaño del icono */
-      cursor: pointer; /* Cursor de mano */
-      transition: color 0.3s ease; /* Transición suave para cambio de color */
-    }
-
-    .social-icon:hover {
-      color: #f39c12; /* Color más oscuro al pasar el mouse */
-    }
-
-    /* Estilo para los nombres debajo de los iconos */
-    .social-name {
-      color: orange; /* Nombre en naranja */
-      margin-top: 5px; /* Separación entre el icono y el texto */
-      font-size: 14px;
-      font-weight: bold;
-    }
-  </style>
-
-
-=======
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 </head>
 <body>
   <header>
@@ -271,22 +186,6 @@
   <button class="subscribe-button">Suscribirse</button>
 </div>
 
-<<<<<<< HEAD
-<div class="social-icons">
-    <a href="https://www.facebook.com/TinkunaGames" class="social-icon" target="_blank">
-      <i class="fab fa-facebook"></i>
-      <div class="social-name">Facebook</div>
-    </a>
-    <a href="https://www.instagram.com/TinkunaGames" class="social-icon" target="_blank">
-      <i class="fab fa-instagram"></i>
-      <div class="social-name">Instagram</div>
-    </a>
-    <a href="https://www.tiktok.com/@TinkunaGames" class="social-icon" target="_blank">
-      <i class="fab fa-tiktok"></i>
-      <div class="social-name">TikTok</div>
-    </a>
-  </div>
-=======
   <!-- Footer Social -->
   <footer class="footer">
     <div class="social-icons">
@@ -307,7 +206,6 @@
       </a>
     </div>
   </footer>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 
 <footer class="footer-container">
         <div class="container">

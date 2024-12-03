@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap CSS -->
    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
-<<<<<<< HEAD
-=======
 
    <style>
     .subscription-row {
@@ -65,7 +63,6 @@
       transition: 0.3s; /* Suavizar la transición */
     }
   </style>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 </head>
 <body>
 <header>
@@ -105,24 +102,15 @@
             <h1>CATAN PARA INICIANTES</h1>
             <p>Una guía completa para nuevos jugadores de Catan. Aprende las reglas básicas, estrategias iniciales y consejos útiles para comenzar tu aventura en la isla de Catan.</p>
             <div class="banner-buttons">
-<<<<<<< HEAD
-                <a href="#" class="btn btn-primary">Descubre Más</a>
-                <a href="#" class="btn btn-outline-light">Comprar Ahora</a>
-=======
                 <a href="productos.php" class="btn btn-primary">Descubre Más</a>
                 <a href="productos.php" class="btn btn-outline-light">Comprar Ahora</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
             </div>
         </div>
     </div>
 
     <!-- Botones grandes -->
     <div class="large-buttons">
-<<<<<<< HEAD
-        <a href="#" class="large-button btn-juegos">
-=======
         <a href="productos.php" class="large-button btn-juegos">
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
             <span>Juegos de Mesa</span>
         </a>
         <a href="#" class="large-button btn-accesorios">
@@ -153,86 +141,47 @@
             <!-- Tarjeta de Producto -->
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card">
-<<<<<<< HEAD
-                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-=======
                     <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="CATAN">
                     <div class="card-body text-center">
                         <h5 class="card-title">CATAN</h5>
                         <p class="card-text">Descripción breve del producto.</p>
                         <a href="productos.php" class="btn btn-primary">Comprar</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
                     </div>
                 </div>
             </div>
             <!-- Tarjetas adicionales duplicando esta estructura -->
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card">
-<<<<<<< HEAD
-                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-=======
                     <img src="assets\imag\Img_Product2.png" class="card-img-top" alt="TICKET TO RIDE">
                     <div class="card-body text-center">
                         <h5 class="card-title">TICKET TO RIDE</h5>
                         <p class="card-text">Descripción breve del producto.</p>
                         <a href="productos.php" class="btn btn-primary">Comprar</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card">
-<<<<<<< HEAD
-                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-=======
                     <img src="assets\imag\Img_Product3.png" class="card-img-top" alt="7 WONDERS">
                     <div class="card-body text-center">
                         <h5 class="card-title">7 WONDERS</h5>
                         <p class="card-text">Descripción breve del producto.</p>
                         <a href="productos.php" class="btn btn-primary">Comprar</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card">
-<<<<<<< HEAD
-                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-=======
                     <img src="assets\imag\Img_Product4.png" class="card-img-top" alt="TERRAFORMING MARS">
                     <div class="card-body text-center">
                         <h5 class="card-title">TERRAFORMING MARS</h5>
                         <p class="card-text">Descripción breve del producto.</p>
                         <a href="productos.php" class="btn btn-primary">Comprar</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="card">
-<<<<<<< HEAD
-                    <img src="assets\imag\imagesCATAN.jpeg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <a href="#" class="btn btn-primary">Comprar</a>
-=======
                     <img src="assets\imag\Img_Product5.png" class="card-img-top" alt="NETRUNNER">
                     <div class="card-body text-center">
                         <h5 class="card-title">NETRUNNER</h5>
@@ -268,7 +217,6 @@
                         <h5 class="card-title">ARK NOVA</h5>
                         <p class="card-text">Descripción breve del producto.</p>
                         <a href="productos.php" class="btn btn-primary">Comprar</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
                     </div>
                 </div>
             </div>
@@ -276,11 +224,7 @@
     </div>
     <!-- Botón de navegación -->
     <div class="text-center mt-4">
-<<<<<<< HEAD
-    <button class="btn btn-primary btn-lg">Todos los Juegos</button>
-=======
     <a href="productos.php" class="btn btn-primary btn-lg">Todos los Juegos</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
   </div>
   </section>
 
@@ -335,114 +279,17 @@
     <div class="container position-relative text-white py-5">
       <div class="row align-items-center">
         <div class="col-md-6">
-<<<<<<< HEAD
-          <img src="assets/imag/zombicide.jpg" alt="Zombicide" class="img-fluid banner-img">
-        </div>
-        <div class="col-md-6">
-          <h3 class="text-uppercase fw-bold">Explorando <span class="text-warning">zombicide</span></h3>
-          <p>Sumérgete en el fascinante mundo de zombicide, donde la estrategia y la creatividad se combinan para ofrecerte una experiencia única. Aprende a diseñar el zoológico perfecto.</p>
-          <a href="#" class="btn btn-primary">Descubre más</a>
-=======
           <img src="assets/imag/Blog_Highlight.png" alt="Zombicide" class="img-fluid banner-img">
         </div>
         <div class="col-md-6">
           <h3 class="text-uppercase fw-bold">Explorando <span class="text-warning">ARK NOVA</span></h3>
           <p>Sumérgete en el fascinante mundo de ARK NOVA, donde la estrategia y la creatividad se combinan para ofrecerte una experiencia única. Aprende a diseñar el zoológico perfecto.</p>
           <a href="productos.php" class="btn btn-primary">Descubre más</a>
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
         </div>
       </div>
     </div>
   </div>
  </section>
-<<<<<<< HEAD
- <footer class="footer-container">
-        <div class="container">
-            <div class="row">
-                <!-- Columna 1: Texto -->
-                <div class="col-md-4 mb-4">
-                    <h5>COLUMNA_FOOTER1</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at turpis ut neque consequat pellentesque. 
-                        Integer eget mauris vitae magna bibendum interdum non eu nunc. Sed efficitur velit a nulla blandit, sed tincidunt
-                        risus dictum. Curabitur dictum magna id eros fermentum, nec ultrices lacus suscipit. Cras vulputate, sapien sed 
-                        consequat.</p>
-
-                    <!-- Listas debajo del párrafo -->
-                    <div class="d-flex">
-                        <!-- Lista duplicada a la izquierda -->
-                        <ul class="custom-list" style="margin-right: 10px;"> <!-- Ajuste de margen -->
-                            <li>Ipsum </li>
-                            <li>Ipsum </li>
-                            <li>Ipsum </li>
-                            <li>Ipsum </li>
-                        </ul>
-
-                        <!-- Lista original a la derecha -->
-                        <ul class="custom-list">
-                            <li>Ipsum </li>
-                            <li>Ipsum </li>
-                            <li>Ipsum </li>
-                            <li>Ipsum </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Columna 2: Imágenes con títulos y texto -->
-                <div class="col-md-4 mb-4">
-                    <h5>COLUMNA_FOOTER2</h5>
-                    <div class="mb-3">
-                        <div class="d-flex align-items-start">
-                            <img src="imagenes/Ajedrez.jpeg" alt="Juego 1" class="me-3" style="width: 115px; height: 100px; object-fit: cover;">
-                            <div>
-                                <h6 class="fw-bold">TOP 5 JUEGOS DE MESA PARA PRINCIPIANTES</h6>
-                                <p class="mb-0">El clásico juego de estrategia para todas las edades.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex align-items-start">
-                            <img src="imagenes/video juegos.png" alt="Juego 2" class="me-3" style="width: 115px; height: 100px; object-fit: cover;">
-                            <div>
-                                <h6 class="fw-bold">JUEGOS DE MESA IDEALES PARA APRENDER EN FAMILIA</h6>
-                                <p class="mb-0">Explora mundos fantásticos en este emocionante juego.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="d-flex align-items-start">
-                            <img src="imagenes/video juegos.png" alt="Juego 3" class="me-3" style="width: 115px; height: 100px; object-fit: cover;">
-                            <div>
-                                <h6 class="fw-bold">COMO ORGANIZAR UNA NOCHE DE JUEGOS INOLVIDABLE</h6>
-                                <p class="mb-0">Desafía a tus amigos con este juego de habilidad.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Columna 3: Texto -->
-                <div class="col-md-4 mb-4">
-                    <h5>COLUMNA_FOOTER3</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at turpis ut neque consequat pellentesque. 
-                        Integer eget mauris vitae magna bibendum interdum non eu nunc. Sed efficitur velit a nulla blandit, sed tincidunt
-                        risus dictum. Curabitur dictum magna id eros fermentum, nec ultrices lacus suscipit. Cras vulputate, sapien sed 
-                        consequat.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mini Footer / Subfooter -->
-<div class="footer-mini-container">
-    <div class="container">
-        <div>
-            <h5 class="footer-mini-text">TINKUNA <span>games</span></h5>
-        </div>
-        <div>
-            <p class="copyright">&copy; 2024 Todos los derechos reservados</p>
-        </div>
-    </div>
-</div>
-=======
 
  <div class="subscription-row">
   <span class="subscribe-text">SUSCRIBETE</span>
@@ -560,7 +407,6 @@
     </div>
   </div>
 
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>

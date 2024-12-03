@@ -135,19 +135,6 @@
   }
 
 /* Banner Principal */
-<<<<<<< HEAD
-.banner {
-    position: relative;
-    background-image: url('../imag/Ark Nova.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 1080px; /* Altura según las especificaciones */
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-=======
 /* Banner Principal */
 .banner {
   position: relative;
@@ -160,7 +147,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 .banner-overlay {
     position: absolute;
@@ -230,15 +216,6 @@
     font-size: 1.5rem;
 }
 .btn-juegos {
-<<<<<<< HEAD
-    background-image: url('../imag/juegos.jpg');
-}
-.btn-accesorios {
-    background-image: url('../imag/logo2.jpeg');
-}
-.btn-eventos {
-    background-image: url('../imag/eventos.jpg');
-=======
   background-image: url('../imag/Img_Category_1.png');
 }
 .btn-accesorios {
@@ -246,23 +223,10 @@
 }
 .btn-eventos {
   background-image: url('../imag/Img_Category_3.png');
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 
 /* Sección de Productos */
 .productos {
-<<<<<<< HEAD
-    width: 100%; /* Ancho fluido */
-    height: 1575px; /* Altura ajustada */
-    background-color: #f5f5f5;
-}
-
-.productos h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-=======
   width: 100%; /* Ancho fluido */
   height: auto; /* Ajusta la altura automáticamente al contenido */
   background-color: #f5f5f5;
@@ -275,35 +239,10 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 
 /* Tarjetas de Productos */
 .card {
-<<<<<<< HEAD
-    border: none;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-img-top {
-    width: 100%; /* Ajusta el ancho automáticamente */
-    height: 277.5px; /* Altura específica para imágenes */
-    object-fit: cover; /* Asegura la proporción */
-}
-
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 0.9rem;
-    color: #666;
-=======
   border: none;
   transition: transform 0.3s;
 }
@@ -326,7 +265,6 @@
 .card-text {
   font-size: 0.9rem;
   color: #666;
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 
 /* Búsqueda de Productos */
@@ -349,45 +287,6 @@
     font-weight: bold;
 }
 
-<<<<<<< HEAD
-/* Banner Publicitario */
-.banner-publicitario {
-    width: 100%;
-    height: auto; /* Altura automática */
-    min-height: 170px; /* Altura mínima para mantener proporción */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.banner-publicitario .banner-fondo {
-    background-image: url('../imag/zombicide.jpg'); /* Imagen de fondo distorsionada */
-    background-size: cover; /* Cubrir todo el contenedor */
-    background-position: center;
-    filter: blur(5px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.banner-publicitario .container {
-    position: relative;
-    z-index: 2;
-}
-.banner-publicitario .banner-img {
-    border: 5px solid white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Blog Highlight */
-.blog-highlight {
-    width: 100%; /* Ancho completo del contenedor */
-    height: 630px; /* Altura especificada */
-    position: relative;
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-=======
 /* Blog Highlight */
 .blog-highlight {
   width: 100%; /* Ancho completo del contenedor */
@@ -395,24 +294,10 @@
   min-height: 170px; /* Altura mínima para mantener proporción */
   position: relative;
   overflow: hidden; /* Oculta cualquier desbordamiento */
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 
 /* Imagen de Fondo */
 .blog-highlight .banner-fondo {
-<<<<<<< HEAD
-    background-image: url('../imag/zombicide.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Asegura que cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Sin repeticiones */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Cubre todo el ancho */
-    height: 100%; /* Cubre toda la altura */
-    filter: blur(5px); /* Mantiene el desenfoque */
-    z-index: -1; /* Detrás del contenido */
-=======
   background-image: url('../imag/Blog_Highlight_Background.png'); /* Ruta de la imagen */
   background-size: cover; /* Asegura que cubra todo el área */
   background-position: center; /* Centra la imagen */
@@ -424,38 +309,22 @@
   height: 100%; /* Cubre toda la altura */
   filter: blur(5px); /* Mantiene el desenfoque */
   z-index: -1; /* Detrás del contenido */
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 
 /* Contenido del Blog Highlight */
 .blog-highlight .container {
-<<<<<<< HEAD
-    position: relative;
-    z-index: 1; /* Asegura que el contenido esté frente al fondo */
-=======
   position: relative;
   z-index: 1; /* Asegura que el contenido esté frente al fondo */
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 }
 
 /* Imagen en Primer Plano */
 .blog-highlight .banner-img {
-<<<<<<< HEAD
-    width: 460px; /* Dimensiones ajustadas */
-    height: 325px;
-    border: 5px solid white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-=======
   border: 5px solid white;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
 /* Contenedor principal del footer */
 .footer-container {
     background-color: #212121; /* Color de fondo oscuro */
@@ -584,8 +453,6 @@
         width: 100%;
     }
 }
-<<<<<<< HEAD
-=======
 
 /* Footer Social */
 .footer {
@@ -720,4 +587,3 @@
   border-radius: 10px;
   margin-top: 20px;
 }
->>>>>>> 05b964a861d0e05715274b7e8b4be8a8071f9de0
