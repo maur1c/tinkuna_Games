@@ -28,6 +28,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
     <link href="assets/css/estilosproductos.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
@@ -221,6 +222,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
             <?php endif; ?>
         </div>
     </main>
+
     <div class="subscription-row">
   <span class="subscribe-text">SUSCRIBETE</span>
   <input type="text" placeholder="Correo" class="input-field">
@@ -337,6 +339,9 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

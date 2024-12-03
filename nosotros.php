@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
   <link href="assets/css/estilosproductos.css">
   <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
@@ -86,28 +87,32 @@
     .subscription-row {
       display: flex; /* Alinear los elementos en una fila */
       align-items: center; /* Centrar verticalmente */
-      gap:150px; /* Espacio entre los elementos */
-      background-color: orange; /* Fondo naranja para la fila */
-      padding: 50px;
-      
+      justify-content: center; /* Centrar horizontalmente */
+      gap:10px; /* Espacio entre los elementos */
+      background-image: url('imagenes/Img_Paralax.png'); /* Aquí debes poner la URL de tu imagen */
+      background-size: cover; /* Asegura que la imagen cubra todo el área */
+      background-position: center; /* Centra la imagen */
+      padding: 20px;
+      min-height: 180px; /* Asegura que haya suficiente altura */
+      text-align: center; /* Centra el texto dentro del contenedor */
     }
 
     .subscribe-text {
-      
       color: white; /* Texto blanco */
       font-size: 1.3rem;
       font-weight: bold;
+      flex-basis: 10%; /* Asegura que ocupe toda la línea */
     }
 
     .input-field {
       border: 2px solid white; /* Borde blanco */
-      background-color: orange; /* Fondo naranja */
+      background-color: transparent; /* Fondo completamente transparente */
       color: white; /* Texto blanco */
       padding: 10px;
       border-radius: 5px; /* Bordes redondeados */
       font-size: 1rem;
       outline: none; /* Quitar el borde azul al enfocar */
-      width: 350px; /* Ancho predeterminado */
+      width: 325px; /* Ancho predeterminado */
     }
 
     .input-field::placeholder {
@@ -118,7 +123,7 @@
     .subscribe-button {
       background-color: white; /* Fondo blanco */
       color: orange; /* Texto naranja */
-      padding:  10px;
+      padding: 10px;
       border: 2px solid orange; /* Borde naranja */
       border-radius: 5px; /* Bordes redondeados */
       font-size: 1rem;
@@ -131,51 +136,164 @@
       color: white; /* Texto blanco */
       transition: 0.3s; /* Suavizar la transición */
     }
+</style>
+<style>
+    /* Estilo general para el cuerpo de la página */
+    body {
+      margin: 0; /* Elimina márgenes predeterminados del navegador */
+      font-family: Arial, sans-serif; /* Fuente estándar para texto */
+    }
+
+    /* Estilo personalizado para la barra de navegación */
+ 
+
+    /* Lista de navegación con elementos centrados */
+    .nav {
+      padding: 0; /* Elimina relleno adicional */
+      margin: 0; /* Elimina márgenes adicionales */
+      display: flex; /* Establece un contenedor flexible */
+      justify-content: center; /* Centra elementos horizontalmente */
+      align-items: center; /* Centra elementos verticalmente */
+    }
+
+    /* Estilo para el logo en la barra de navegación */
+    .navbar-brand.logo {
+      font-size: 1.8rem; /* Tamaño grande para destacar el logo */
+      font-weight: bold; /* Texto en negrita */
+      margin-right: 2rem; /* Espacio entre el logo y los enlaces */
+      text-decoration: none; /* Elimina el subrayado del texto */
+      color: #000; /* Color negro para el texto del logo */
+    }
+
+    /* Estilo para los elementos individuales de la lista */
+    .nav-item {
+      list-style: none; /* Elimina viñetas de la lista */
+      margin: 0 1rem; /* Espaciado horizontal entre elementos */
+    }
+
+    /* Estilo para los enlaces dentro de la lista */
+    .nav-link {
+      text-decoration: none; /* Sin subrayado para los enlaces */
+      color: #000; /* Texto en negro */
+      font-size: 1rem; /* Tamaño estándar del texto */
+      transition: color 0.3s; /* Efecto de transición para el color */
+    }
+
+    /* Cambia el color del enlace al pasar el cursor */
+    .nav-link:hover {
+      color: #007bff; /* Azul al pasar el cursor */
+    }
+
+    /* Contenido del encabezado centrado */
+    .header-content {
+      margin-top: 1rem; /* Espacio superior para separarlo de la barra */
+      text-align: center; /* Centra el texto horizontalmente */
+    }
+
+    /* Estilo para el título principal del encabezado */
+    .header-title {
+      font-size: 3.5rem; /* Tamaño grande para destacar */
+      font-weight: bold; /* Texto en negrita */
+      margin: 0; /* Sin margen adicional */
+    }
+
+    /* Estilo para el subtítulo del encabezado */
+    .header-subtitle {
+      font-size:1.2rem; /* Tamaño menor que el título */
+      color: white; /* Color gris claro */
+      margin-top: 0.5rem; /* Espacio entre el título y el subtítulo */
+    }
+  </style>
+
+<style>
+    /* Estilos específicos para el contenido principal */
+    main .container {
+      width:90%; /* Ajusta el ancho del contenido principal */
+      max-width: 1350px; /* Limita el tamaño máximo del contenedor */
+      margin: 2rem auto; /* Centra el contenido y agrega margen superior/inferior */
+      padding: 4rem; /* Espaciado interno */
+      background-color: #f9f9f9; /* Fondo claro */
+      border-radius: 8px; /* Bordes redondeados */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    /* Estilo del título */
+    main .columna1 h2 {
+      font-size: 1.8rem; /* Tamaño del título */
+      font-weight: bold; /* Negrita */
+      color: #333; /* Color oscuro */
+      padding:2rem; /* Espaciado interno */
+      text-align: center; /* Centrado */
+      margin-bottom: 3rem; /* Espacio inferior */
+    }
+
+    /* Estilo de los párrafos */
+    main .columna1 p {
+      margin-bottom: 1.5rem; /* Espacio entre párrafos */
+      text-align: justify; /* Texto justificado */
+      color: #555; /* Color gris oscuro */
+      line-height: 1.6; /* Mejora la legibilidad */
+    }
   </style>
 
 </head>
 <body>
-  <header>
-    <!--codigo moodificado navabar de index.php-->
-  
-    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
-    <div class="container-fluid">
-      <a href="index.php" class="navbar-brand logo">TINKUNAGAMES</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
-</ul>
-        <a href="carrito.php" class="btn btn-outline-primary ms-2"><i class="fas fa-shopping-cart"></i></a>
-      </div>
+<header>
+  <nav class="navbar custom-navbar">
+    <div class="container">
+      <!-- Logo y menú centrados -->
+      <ul class="nav justify-content-center align-items-center">
+        <li class="nav-item">
+          <a href="index.php" class="navbar-brand logo">TINKUNAGAMES</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.php">Blog</a></li>
+      </ul>
     </div>
   </nav>
-<div class="header-content">
+  <div class="header-content text-center">
+    <!-- Encabezado debajo del navbar -->
     <h1 class="header-title">NOSOTROS</h1>
     <p class="header-subtitle">Tinkuna Games</p>
   </div>
-  </header>
+</header>
 
 <main>
 <div class="container">
     <div class="columna1">
-      <h2>Nosotros</h2>
+      <h2>LOREM IPSUM </h2>
+     
       <p>
-        <p>TinkunaGames es una tienda virtual, aquí te vas a encontrar muchísima variedad de productos para tu divercion.  
-        </p><br>
-        <p>Hemos tenido siempre como prioridad ofrecer productos variados y de calidad, a precios accesibles y acompañado por un servicio al cliente de primera. </p><br>
-        <p>La creación de una comunidad de clientes leales ha ayudado a TinkunaGames a crecer y convertirse en la empresa que somos ahora. No solo somos una tienda virtual.</p><br>
+        TinkunaGames es una tienda virtual donde encontrarás una gran variedad de productos para tu diversión. 
+        Nuestra meta principal es ofrecer una experiencia única a nuestros clientes, priorizando la calidad y el 
+        entretenimiento.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin at accumsan magna, vel 
+        vestibulum ipsum. Duis viverra magna id magna efficitur venenatis. Cras sodales orci eget orci vehicula, 
+        sed ornare orci facilisis. Sed dignissim, purus non feugiat aliquet, velit sem auctor ligula, et blandit 
+        enim ligula nec nunc. Integer tempor nisi eget lectus vehicula, a tempor felis laoreet.
+      </p>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque 
+        vehicula ex et interdum ultricies. Donec feugiat bibendum nisl, in convallis libero facilisis ac. Fusce 
+        accumsan justo a odio fermentum, ut venenatis eros suscipit. Integer scelerisque, lorem vel efficitur 
+        dictum, enim urna pharetra lacus, sed fermentum purus nulla in nunc.
+      </p>
+      <p>
+        Maecenas tincidunt diam sit amet magna facilisis dictum. Sed in tincidunt magna, vitae venenatis mauris. 
+        Praesent rhoncus risus a felis placerat, a consectetur justo bibendum. Duis sed consequat ex, a porttitor 
+        arcu. Etiam eu lacus vel erat efficitur malesuada. Fusce quis fringilla metus. Curabitur et eros elit.
+      </p>
+      <p>
+        Nulla tincidunt diam id sapien accumsan mollis. Phasellus id nisi ut sem finibus porttitor. Aliquam 
+        accumsan quam nec tempor elementum. Vestibulum blandit, eros non scelerisque blandit, felis nisl cursus 
+        purus, ut volutpat risus nulla at nunc. Aenean convallis at nulla non convallis.
       </p>
     </div>
-    <div class="columna2">
-      <img src="assets\imag\fondo1.jpeg">
-    </div>
-</div>
+    
 </main>
 
 <div class="subscription-row">
@@ -294,8 +412,7 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
