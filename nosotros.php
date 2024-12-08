@@ -16,7 +16,7 @@
       /* Estilo para el header con imagen de fondo */
       header {
         position: relative;
-        background-image: url('assets//imag/UI3.jpg'); /* Sustituye esta URL por la imagen que desees */
+        background-image: url('assets//imag/About_Us_Header.png'); /* Sustituye esta URL por la imagen que desees */
         background-size: cover;
         background-position: center;
         height: 280px; /* Puedes ajustar la altura */
@@ -42,7 +42,7 @@
         font-size: 1.5rem;
       }
 .custom-navbar {
-  backdrop-filter: blur(5px); /* Efecto suave */
+
   z-index: 10;
 }
 

@@ -18,28 +18,32 @@
     .subscription-row {
       display: flex; /* Alinear los elementos en una fila */
       align-items: center; /* Centrar verticalmente */
-      gap:150px; /* Espacio entre los elementos */
-      background-color: orange; /* Fondo naranja para la fila */
-      padding: 50px;
-      
+      justify-content: center; /* Centrar horizontalmente */
+      gap:10px; /* Espacio entre los elementos */
+      background-image: url('imagenes/Img_Paralax.png'); /* Aquí debes poner la URL de tu imagen */
+      background-size: cover; /* Asegura que la imagen cubra todo el área */
+      background-position: center; /* Centra la imagen */
+      padding: 20px;
+      min-height: 180px; /* Asegura que haya suficiente altura */
+      text-align: center; /* Centra el texto dentro del contenedor */
     }
 
     .subscribe-text {
-      
       color: white; /* Texto blanco */
       font-size: 1.3rem;
       font-weight: bold;
+      flex-basis: 10%; /* Asegura que ocupe toda la línea */
     }
 
     .input-field {
       border: 2px solid white; /* Borde blanco */
-      background-color: orange; /* Fondo naranja */
+      background-color: transparent; /* Fondo completamente transparente */
       color: white; /* Texto blanco */
       padding: 10px;
       border-radius: 5px; /* Bordes redondeados */
       font-size: 1rem;
       outline: none; /* Quitar el borde azul al enfocar */
-      width: 350px; /* Ancho predeterminado */
+      width: 325px; /* Ancho predeterminado */
     }
 
     .input-field::placeholder {
@@ -50,7 +54,7 @@
     .subscribe-button {
       background-color: white; /* Fondo blanco */
       color: orange; /* Texto naranja */
-      padding:  10px;
+      padding: 10px;
       border: 2px solid orange; /* Borde naranja */
       border-radius: 5px; /* Bordes redondeados */
       font-size: 1rem;
@@ -63,7 +67,7 @@
       color: white; /* Texto blanco */
       transition: 0.3s; /* Suavizar la transición */
     }
-  </style>
+</style>
 </head>
 <body>
 <header>
