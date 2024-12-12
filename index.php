@@ -19,7 +19,7 @@
       display: flex; /* Alinear los elementos en una fila */
       align-items: center; /* Centrar verticalmente */
       gap:150px; /* Espacio entre los elementos */
-      background-color: orange; /* Fondo naranja para la fila */
+      background-color: #ff6600; /* Fondo naranja para la fila */
       padding: 50px;
       
     }
@@ -33,7 +33,7 @@
 
     .input-field {
       border: 2px solid white; /* Borde blanco */
-      background-color: orange; /* Fondo naranja */
+      background-color: #ff6600; /* Fondo naranja */
       color: white; /* Texto blanco */
       padding: 10px;
       border-radius: 5px; /* Bordes redondeados */
@@ -59,7 +59,7 @@
     }
 
     .subscribe-button:hover {
-      background-color: orange; /* Fondo naranja al pasar el mouse */
+      background-color: #ff6600; /* Fondo naranja al pasar el mouse */
       color: white; /* Texto blanco */
       transition: 0.3s; /* Suavizar la transición */
     }

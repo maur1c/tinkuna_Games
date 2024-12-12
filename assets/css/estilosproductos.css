@@ -124,8 +124,6 @@
     }
 }
 
-
-
 /*productos-card*/
 .container-productos{
   width: 100%;
@@ -208,4 +206,5 @@ button.button.agregar-carrito {
 button.button.agregar-carrito:hover {
   background-color: #e65c00; /* Fondo más oscuro */
 }
+
 

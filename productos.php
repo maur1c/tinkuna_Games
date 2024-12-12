@@ -20,7 +20,9 @@ $query = $conn->prepare("
 ");
 $query->execute([':nombre' => $buscar . '%']);
 $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos filtrados
+include 'carritoOverlay.php';
 ?>
+
 
 <!doctype html>
 <html lang="es">
@@ -189,7 +191,7 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos 
             <span class="fas fa-search"></span>
           </button>
         </form>
-        <a href="carrito.php" class="btn btn-outline-primary ms-2"><i class="fas fa-shopping-cart"></i></a>
+        <a href="#" id="abrir-overlay" class="btn btn-outline-primary ms-2"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
   </nav>
