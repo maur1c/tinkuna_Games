@@ -68,6 +68,12 @@
       transition: 0.3s; /* Suavizar la transición */
     }
 </style>
+
+
+
+
+
+
 </head>
 <body>
 <header>

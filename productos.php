@@ -369,6 +369,34 @@ form input[type="checkbox"]:checked::after {
 }
 
 </style>
+
+
+
+
+<style>
+  /* Alineación de los filtros a la izquierda */
+.filter-panel {
+  text-align: left;
+}
+
+/* Alineación de los encabezados */
+.filter-panel h4, .filter-panel h5 {
+  text-align: left;
+}
+
+/* Alineación de las etiquetas */
+.navleft label {
+  text-align: left;
+  display: block;
+}
+
+/* Alineación del select y el input */
+.navleft select, .navleft input[type="checkbox"] {
+  text-align: left;
+}
+</style>
+
+
   </head>
   <body>
   <header>

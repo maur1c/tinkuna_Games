@@ -279,7 +279,7 @@ main{
     border: none;
     border-radius: 10px;
     margin-top: 20px;
-
+}
 .container-contacto{
     background-image: url("../imag/logo2.jpeg");
     background-size: 100vw 100vh;
@@ -434,10 +434,7 @@ main{
     padding: 20px; /* Espaciado interno */
     border-radius: 8px; /* Esquinas redondeadas */
 }
-.columna2{
-    /* width: 40%;
-    float: right; */
-}
+
 .columna2 img{
     width: 450px;
 }
@@ -859,8 +856,11 @@ a:hover {
     border: 5px solid white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
+}
 
 
 
-  
+
+
+
+

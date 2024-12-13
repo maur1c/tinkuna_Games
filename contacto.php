@@ -22,19 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
   <link href="assets/css/estilosproductos.css">
-
+  <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-
     <style>
         .mensaje-exito {
             color: green;
@@ -49,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 
 <style>
-      /* Estilo para el header con imagen de fondo */
-      header {
+       
+       header {
         position: relative;
         background-image: url('assets//imag/About_Us_Header.png'); /* Sustituye esta URL por la imagen que desees */
         background-size: cover;
@@ -242,6 +240,74 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </style>
 
 
+
+<style>
+
+  
+
+
+/* Centrar la info de contacto y formulario */
+.container-contacto {
+  display: flex;
+  justify-content: center; /* Centramos el contenido */
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Para pantallas pequeñas */
+}
+
+.formulario-contacto,
+.info-contacto {
+  flex: 1;
+  max-width: 45%; /* Ajusta el tamaño */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.mapa iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+</style>
+
+
+
+
+
+<style>
+  .container-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  width: 100%; /* Aseguramos que ocupe todo el ancho del contenedor principal */
+}
+
+.formulario-contacto,
+.info-contacto {
+  flex: 1;
+  max-width: 80%; /* Más ancho */
+  width: 100%; /* Forzamos que use todo su espacio disponible */
+  padding: 20px; /* Más espacio interno */
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box; /* Aseguramos que padding no altere el ancho */
+}
+.mapa iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+</style>
+
 </head>
 <body>
 <header>
@@ -255,35 +321,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
         <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.php">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Blog</a></li>
       </ul>
     </div>
   </nav>
   <div class="header-content text-center">
     <!-- Encabezado debajo del navbar -->
-    <h1 class="header-title">NOSOTROS</h1>
+    <h1 class="header-title"> CONTACTO</h1>
     <p class="header-subtitle">Tinkuna Games</p>
   </div>
 </header>
-    <div class="container-contacto">
-    <h2>Formulario</h2>
-
-    
-    <?php if ($mensajeEnviado): ?>
-        <div class="mensaje-exito"><?php echo $mensajeEnviado; ?></div>
-        <script>
-            setTimeout(function() {
-                window.location.href = "contacto.php"; // Redirige después de 3 segundos
-            }, 3000);
-        </script>
-    <?php endif; ?>
-
-    
-    <section class="formulario-contacto">
-
-  
-    <div class="container-contacto">
-        <h2>CONTACTO</h2>
+<div class="container-contacto">
+    <!-- Sección de formulario -->
+    <div class="formulario-contacto">
+        <h2>Formulario</h2>
         <?php if ($mensajeEnviado): ?>
             <div class="mensaje-exito"><?php echo $mensajeEnviado; ?></div>
             <script>
@@ -299,23 +350,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <textarea name="mensaje" placeholder="Escriba su Mensaje" required></textarea>
             <input type="submit" value="ENVIAR" class="button">
         </form>
-
-    </section>
+    </div>
 
     <!-- Sección de información de contacto -->
-    <section class="info-contacto">
-        <h3>Información de Contacto</h3>
+    <div class="info-contacto">
+        <h2>Información de Contacto</h2>
         <p><i class="fas fa-map-marker-alt"></i> Calama & Calle 25 de Mayo, Cochabamba</p>
         <p><i class="fas fa-envelope"></i> contacto@tinkunagames.com</p>
         <p><i class="fas fa-phone-alt"></i> +591 6561 1222</p>
         <p><i class="fas fa-clock"></i> Horario: Lun-Vie, 9AM - 6PM</p>
-    </section>
+    </div>
+</div>
 
-    <!-- Sección del mapa -->
-    <section class="mapa">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1fgYH9ms19VUs-4btIwBdEDaNltOfu9A&ehbc=2E312F&noprof=1" 
-            width="700" height="500"></iframe>
-    </section>
+<!-- Sección del mapa -->
+<div class="mapa">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1fgYH9ms19VUs-4btIwBdEDaNltOfu9A&ehbc=2E312F&noprof=1" 
+        width="100%" height="500"></iframe>
 </div>
 
 <div class="subscription-row">
@@ -435,6 +485,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     </div>
 
    

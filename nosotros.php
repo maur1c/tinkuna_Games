@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
       /* Estilo para el header con imagen de fondo */
+
+      
       header {
         position: relative;
         background-image: url('assets//imag/About_Us_Header.png'); /* Sustituye esta URL por la imagen que desees */
@@ -236,6 +238,8 @@
     }
   </style>
 
+  
+
 </head>
 <body>
 <header>
@@ -249,7 +253,7 @@
         <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="productos.php">Productos</a></li>
         <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.php">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="">Blog</a></li>
       </ul>
     </div>
   </nav>
