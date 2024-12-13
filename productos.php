@@ -20,7 +20,9 @@ $query = $conn->prepare("
 ");
 $query->execute([':nombre' => $buscar . '%']);
 $productos = $query->fetchAll(PDO::FETCH_ASSOC); // Obtener todos los productos filtrados
+include 'carritoOverlay.php';
 ?>
+
 
 <!doctype html>
 <html lang="es">
@@ -418,9 +420,9 @@ form input[type="checkbox"]:checked::after {
           <input class="form-control me-2" type="search" name="buscar" placeholder="Buscar">
           <button class="btn btn-outline-success" type="submit">
             <span class="fas fa-search"></span>
-          </button>
-        </form>-->
-        <a href="carrito.php" class="btn btn-outline-primary ms-2"><i class="fas fa-shopping-cart"></i></a>
+          </button> -->
+        </form>
+        <a href="#" id="abrir-overlay" class="btn btn-outline-primary ms-2"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </div>
   </nav>

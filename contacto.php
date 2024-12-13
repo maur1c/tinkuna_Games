@@ -22,9 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nosotros</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/estilos.css" rel="stylesheet" type="text/css"> <!-- CSS personalizado -->
+  <link href="assets/css/estilosproductos.css">
+>>>>>>> origin/zapata
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  
   <link href="assets/css/estilosproductos.css">
@@ -50,7 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
        
        header {
         position: relative;
-        background-image: url('assets//imag/About_Us_Header.png'); /* Sustituye esta URL por la imagen que desees */
+
+        background-image: url('assets//imag/Contact_Header.png'); /* Sustituye esta URL por la imagen que desees */
         background-size: cover;
         background-position: center;
         height: 280px; /* Puedes ajustar la altura */
@@ -121,14 +128,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     .subscription-row {
       display: flex; /* Alinear los elementos en una fila */
       align-items: center; /* Centrar verticalmente */
-      justify-content: center; /* Centrar horizontalmente */
-      gap:10px; /* Espacio entre los elementos */
-      background-image: url('imagenes/Img_Paralax.png'); /* Aquí debes poner la URL de tu imagen */
-      background-size: cover; /* Asegura que la imagen cubra todo el área */
-      background-position: center; /* Centra la imagen */
-      padding: 20px;
-      min-height: 180px; /* Asegura que haya suficiente altura */
-      text-align: center; /* Centra el texto dentro del contenedor */
+      gap:150px; /* Espacio entre los elementos */
+      background-color: #ff6600; /* Fondo naranja para la fila */
+      padding: 50px;
     }
 
     .subscribe-text {
@@ -140,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     .input-field {
       border: 2px solid white; /* Borde blanco */
-      background-color: transparent; /* Fondo completamente transparente */
+      background-color: #ff6600; /* Fondo naranja */
       color: white; /* Texto blanco */
       padding: 10px;
       border-radius: 5px; /* Bordes redondeados */
@@ -166,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     .subscribe-button:hover {
-      background-color: orange; /* Fondo naranja al pasar el mouse */
+      background-color: #ff6600; /* Fondo naranja al pasar el mouse */
       color: white; /* Texto blanco */
       transition: 0.3s; /* Suavizar la transición */
     }
@@ -330,19 +332,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1 class="header-title"> CONTACTO</h1>
     <p class="header-subtitle">Tinkuna Games</p>
   </div>
-</header>
-<div class="container-contacto">
-    <!-- Sección de formulario -->
-    <div class="formulario-contacto">
-        <h2>Formulario</h2>
-        <?php if ($mensajeEnviado): ?>
-            <div class="mensaje-exito"><?php echo $mensajeEnviado; ?></div>
-            <script>
-                setTimeout(function() {
-                    window.location.href = "contacto.php"; // Redirige después de 3 segundos
-                }, 3000);
-            </script>
-        <?php endif; ?>
+  </header>
+
+    <div class="container-contacto">
+    <h2>Formulario</h2>
+
+    
+    <?php if ($mensajeEnviado): ?>
+        <div class="mensaje-exito"><?php echo $mensajeEnviado; ?></div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "contacto.php"; // Redirige después de 3 segundos
+            }, 3000);
+        </script>
+    <?php endif; ?>
+
+    
+    <section class="formulario-contacto">
         <form action="contacto.php" method="POST">
             <input type="text" name="nombre" placeholder="Ingrese su Nombre" required>
             <input type="email" name="email" placeholder="Ingrese su Correo" required>
@@ -350,7 +356,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <textarea name="mensaje" placeholder="Escriba su Mensaje" required></textarea>
             <input type="submit" value="ENVIAR" class="button">
         </form>
-    </div>
+
+    </section>
 
     <!-- Sección de información de contacto -->
     <div class="info-contacto">
@@ -485,12 +492,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    </div>
-
-   
-
-
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -498,6 +499,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="assets/js/iconos.js"></script>
     <script src="assets/js/contacto.js"></script>
 </body>
-
 </html>
-

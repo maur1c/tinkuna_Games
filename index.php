@@ -18,14 +18,9 @@
     .subscription-row {
       display: flex; /* Alinear los elementos en una fila */
       align-items: center; /* Centrar verticalmente */
-      justify-content: center; /* Centrar horizontalmente */
-      gap:10px; /* Espacio entre los elementos */
-      background-image: url('imagenes/Img_Paralax.png'); /* Aquí debes poner la URL de tu imagen */
-      background-size: cover; /* Asegura que la imagen cubra todo el área */
-      background-position: center; /* Centra la imagen */
-      padding: 20px;
-      min-height: 180px; /* Asegura que haya suficiente altura */
-      text-align: center; /* Centra el texto dentro del contenedor */
+      gap:150px; /* Espacio entre los elementos */
+      background-color: #ff6600; /* Fondo naranja para la fila */
+      padding: 50px;
     }
 
     .subscribe-text {
@@ -37,7 +32,7 @@
 
     .input-field {
       border: 2px solid white; /* Borde blanco */
-      background-color: transparent; /* Fondo completamente transparente */
+      background-color: #ff6600; /* Fondo naranja */
       color: white; /* Texto blanco */
       padding: 10px;
       border-radius: 5px; /* Bordes redondeados */
@@ -63,7 +58,7 @@
     }
 
     .subscribe-button:hover {
-      background-color: orange; /* Fondo naranja al pasar el mouse */
+      background-color: #ff6600; /* Fondo naranja al pasar el mouse */
       color: white; /* Texto blanco */
       transition: 0.3s; /* Suavizar la transición */
     }

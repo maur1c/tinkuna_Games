@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
-<<<<<<< HEAD
--- Tiempo de generación: 08-11-2024 a las 18:27:26
-=======
 -- Tiempo de generación: 14-11-2024 a las 12:21:28
->>>>>>> main
 -- Versión del servidor: 8.3.0
 -- Versión de PHP: 8.3.3
 
@@ -36,7 +32,7 @@ CREATE TABLE `carrito` (
   `usuario_id` int DEFAULT NULL,
   `producto_id` int DEFAULT NULL,
   `cantidad` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -133,47 +129,6 @@ CREATE TABLE `historial_de_compra` (
 --
 
 INSERT INTO `historial_de_compra` (`id`, `usuario_id`, `producto_id`, `cantidad`, `precio`, `fecha_compra`) VALUES
-<<<<<<< HEAD
-(1, 1, 7, 1, 400.00, '2024-10-11 15:28:10'),
-(2, 1, 6, 1, 300.00, '2024-10-11 15:29:49'),
-(3, 1, 7, 1, 400.00, '2024-10-11 15:37:03'),
-(4, 1, 2, 1, 24.00, '2024-10-11 15:39:04'),
-(5, 1, 2, 1, 24.00, '2024-10-11 15:39:56'),
-(6, 1, 6, 1, 300.00, '2024-10-11 15:43:40'),
-(7, 1, 8, 1, 23.00, '2024-10-11 15:48:47'),
-(9, 1, 6, 1, 300.00, '2024-10-11 15:59:51'),
-(10, 1, 2, 1, 24.00, '2024-10-11 16:02:32'),
-(11, 1, 6, 1, 300.00, '2024-10-11 16:03:29'),
-(12, 1, 2, 1, 24.00, '2024-10-11 16:35:17'),
-(13, 1, 2, 1, 24.00, '2024-10-11 16:41:02'),
-(14, 1, 2, 1, 24.00, '2024-10-14 08:38:05'),
-(15, 1, 2, 1, 24.00, '2024-10-14 08:38:54'),
-(16, 1, 8, 1, 23.00, '2024-10-14 08:39:26'),
-(17, 1, 8, 1, 23.00, '2024-10-14 08:39:26'),
-(18, 1, 8, 1, 23.00, '2024-10-14 08:39:26'),
-(19, 1, 2, 1, 24.00, '2024-10-14 14:59:49'),
-(20, 1, 2, 1, 24.00, '2024-10-14 16:51:36'),
-(21, 1, 2, 1, 24.00, '2024-10-15 15:47:34'),
-(22, 1, 8, 1, 23.00, '2024-10-15 15:50:21'),
-(23, 1, 2, 1, 24.00, '2024-10-15 15:52:51'),
-(24, 1, 2, 1, 24.00, '2024-10-19 17:37:45'),
-(25, 1, 2, 1, 24.00, '2024-10-19 17:45:17'),
-(26, 1, 2, 1, 24.00, '2024-10-21 15:10:52'),
-(27, 1, 2, 1, 24.00, '2024-10-21 15:15:34'),
-(28, 8, 10, 1, 10.00, '2024-10-21 17:33:01'),
-(29, 8, 10, 1, 10.00, '2024-10-21 17:36:56'),
-(30, 8, 10, 1, 10.00, '2024-10-21 17:40:10'),
-(31, 1, 10, 1, 10.00, '2024-10-21 17:50:16'),
-(32, 8, 10, 1, 10.00, '2024-10-21 17:53:55'),
-(33, 10, 10, 1, 10.00, '2024-10-21 18:03:30'),
-(34, 10, 10, 1, 10.00, '2024-10-21 18:04:29'),
-(35, 11, 10, 1, 10.00, '2024-10-21 18:26:20'),
-(36, 7, 2, 1, 20.00, '2024-10-22 17:16:40'),
-(37, 1, 12, 1, 5.00, '2024-10-28 15:56:29'),
-(38, 1, 11, 1, 5.00, '2024-10-28 15:56:29'),
-(39, 3, 2, 1, 20.00, '2024-11-08 10:48:30'),
-(40, 3, 2, 1, 20.00, '2024-11-08 10:48:30');
-=======
 (52, 3, 45, 1, 145.00, '2024-11-12 15:05:22'),
 (53, 1, 48, 1, 170.00, '2024-11-12 16:03:25'),
 (54, 1, 49, 1, 170.00, '2024-11-12 16:12:07');
@@ -245,13 +200,6 @@ CREATE TABLE `productos` (
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `precio` decimal(10,2) DEFAULT NULL,
   `imagen` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-<<<<<<< HEAD
-  `codproducto` int NOT NULL,
-  `proveedor` int DEFAULT NULL,
-  `existencia` int DEFAULT NULL,
-  `date_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `foto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
-=======
   `proveedor` int DEFAULT NULL,
   `existencia` int DEFAULT NULL,
   `date_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -264,16 +212,6 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-<<<<<<< HEAD
-INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `codproducto`, `proveedor`, `existencia`, `date_add`, `foto`) VALUES
-(2, 'arke', 'juego', 20.00, 'Ark Nova.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
-(6, 'catan', 'juego', 300.00, 'imagesCATAN.jpeg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
-(7, 'zombiecide', 'juego', 400.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
-(8, 'arke', 'juego', 23.00, 'Ark Nova.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
-(10, 'zombie', 'juegos buenos', 10.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
-(11, 'zombie', 'juegos buenos', 5.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
-(12, 'zombie', 'juegos buenos', 5.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL);
-=======
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `proveedor`, `existencia`, `date_add`, `id_juego`, `estatus`) VALUES
 (31, 'Monopoly 12', 'juego familiar', 300.00, '1731439527_accsesorios.jpeg', NULL, NULL, '2024-11-12 13:53:58', 6, 1),
 (32, 'arke', 'juego', 30.00, 'Ark Nova.jpg', NULL, NULL, '2024-11-12 13:56:45', 7, 1),
@@ -311,9 +249,6 @@ CREATE TABLE `proveedor` (
 --
 
 INSERT INTO `proveedor` (`codproveedor`, `proveedor`, `contacto`, `telefono`, `direccion`, `date_add`, `usuario_id`, `estatus`) VALUES
-<<<<<<< HEAD
-(2, 'Helados', 'oliver franz', 63874473, '6 de agosto', '2024-11-08 13:04:36', 1, 1);
-=======
 (31, 'helado', 'Mauricio Mamani F', 5354354, 'Bolivia-Cochabamba', '2024-11-12 15:46:38', 1, 0),
 (32, 'pil', 'Claudia Rosaless', 43545476, 'Bolivia-Cochabamba', '2024-11-12 15:52:50', 1, 1),
 (41, 'Ask aaaas', 'Tony Fernandez a', 87664438, 'indefinido', '2024-11-13 22:10:24', 1, 1),
@@ -480,11 +415,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-<<<<<<< HEAD
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
-=======
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
->>>>>>> main
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -508,9 +439,7 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `historial_de_compra`
 --
 ALTER TABLE `historial_de_compra`
-<<<<<<< HEAD
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
-=======
+
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
@@ -593,14 +522,7 @@ ALTER TABLE `historial_de_compra`
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
---
-<<<<<<< HEAD
--- Filtros para la tabla `proveedor`
---
-ALTER TABLE `proveedor`
-  ADD CONSTRAINT `proveedor_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `proveedor_ibfk_2` FOREIGN KEY (`codproveedor`) REFERENCES `productos` (`id`) ON DELETE CASCADE;
-=======
+
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`

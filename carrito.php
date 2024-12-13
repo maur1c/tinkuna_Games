@@ -245,35 +245,210 @@ foreach ($carrito as $item) {
   </style>
 
 <style>
-    /* Estilos específicos para el contenido principal */
-    main .container {
-      width:90%; /* Ajusta el ancho del contenido principal */
-      max-width: 1350px; /* Limita el tamaño máximo del contenedor */
-      margin: 2rem auto; /* Centra el contenido y agrega margen superior/inferior */
-      padding: 4rem; /* Espaciado interno */
-      background-color: #f9f9f9; /* Fondo claro */
-      border-radius: 8px; /* Bordes redondeados */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    }
 
-    /* Estilo del título */
-    main .columna1 h2 {
-      font-size: 1.8rem; /* Tamaño del título */
-      font-weight: bold; /* Negrita */
-      color: #333; /* Color oscuro */
-      padding:2rem; /* Espaciado interno */
-      text-align: center; /* Centrado */
-      margin-bottom: 3rem; /* Espacio inferior */
-    }
 
-    /* Estilo de los párrafos */
-    main .columna1 p {
-      margin-bottom: 1.5rem; /* Espacio entre párrafos */
-      text-align: justify; /* Texto justificado */
-      color: #555; /* Color gris oscuro */
-      line-height: 1.6; /* Mejora la legibilidad */
-    }
-  </style>
+  /* Contenedor del Carrito (Izquierda) */
+  .container-carrito {
+      width: 65%; /* Ajuste de tamaño para que quepa junto al resumen */
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .container-carrito {
+  max-width: 350px; /* Aumenté el max-width para que se vea más espacioso */
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  /* Tabla del carrito */
+  .tabla {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  }
+  /* Tabla de productos */
+.tabla {
+  width:200%;
+  margin-bottom: 20px;
+}
+
+
+  .tabla th, .tabla td {
+      border: 1px solid #ccc;
+      padding: 100px;
+      text-align: center;
+  }
+
+  .botones-envio .button, .button-procesar {
+      padding: 10px 20px;
+      background-color: orangered;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+     
+  }
+
+  .botones-envio .button:hover, .button-procesar:hover {
+      background-color: green;
+  }
+  
+</style>
+
+
+<style>
+
+
+  
+.tabla th, .tabla td {
+  padding: 20px; /* Aumenté el padding para que las celdas tengan más espacio */
+  text-align: left;
+}
+
+.tabla thead th {
+  background-color: #D3D3D3;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tabla tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tabla tfoot th {
+  text-align: right;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+</style>
+
+
+
+
+<style>
+
+  /* Estilos generales del contenedor */
+.contenedor-pagina {
+    display: flex; /* Asegura que los elementos estén en línea */
+    justify-content: space-between;
+    gap: 0px; /* Espacio entre la tabla y el resumen */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben */
+}
+
+/* Resumen del Pedido (Derecha) */
+.subtotal-box {
+    width: 100%; /* Ajuste de tamaño para que quepa junto a la tabla */
+    padding: 30px;
+    background-color: #D3D3D3;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top:55px; /* Para alinearlo un poco más hacia el lado derecho */
+}
+
+/* Estilo para los títulos y textos del resumen */
+.subtotal-box h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    margin-top: -15px; /* Reduce el espacio arriba para acercarlo a la tabla */
+    font-weight: bold;
+    color: black;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.subtotal-box p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: black;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.subtotal-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Botón de finalizar pedido */
+.finalizar-button {
+    padding: 10px 20px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.finalizar-button:hover {
+    background-color: gold;
+}
+
+
+/* Resumen alineado a la derecha */
+.resumen {
+  text-align: right;
+  position: relative; /* Esto permite moverlo con left o right */
+  left: -300px; /* Mueve el resumen 20px a la izquierda para acercarlo a la tabla */
+}
+
+</style>
+
+<style>
+/* Sección del total */
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px 40px; /* Aumenté el padding para más espacio */
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  margin-bottom: 30px; /* Aumenté el margen inferior */
+  gap: 200px; /* Añadí espacio entre los elementos internos */
+  width: 200%; /* Hago que ocupe el ancho completo del contenedor */
+}
+
+/* Botones */
+.botones-envio {
+  display: flex;
+  justify-content: space-evenly; /* Distribuye los botones con más espacio entre ellos */
+  align-items: center;
+  gap: 100px; /* Aumenté el espacio entre los botones */
+  padding: 10px 0; /* Agregué un padding vertical para separarlos del contenido de arriba */
+  width: 200%; /* Asegura que ocupe el ancho completo del contenedor */
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/zapata
 
 </head>
 <body>
@@ -301,44 +476,58 @@ foreach ($carrito as $item) {
 
 
 <main>
-    <div class="container-carrito">
-        
-        <form id="procesar-pago" action="conf_paipay.php?total=<?php echo number_format($totalCarrito, 2, '.', ''); ?>" method="POST">
-            <div id="carrito" class="contenido">
-                <table class="tabla" id="lista-compra">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Sub Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($carrito as $item): ?>
+    <div class="contenedor-pagina">
+        <div class="container-carrito">
+            <form id="procesar-pago" action="conf_paipay.php?total=<?php echo number_format($totalCarrito, 2, '.', ''); ?>" method="POST">
+                <div id="carrito" class="contenido">
+                    <table class="tabla" id="lista-compra">
+                        <thead>
+>>>>>>> origin/zapata
                             <tr>
                                 <td><?php echo htmlspecialchars($item['nombre']); ?></td>
                                 <td><?php echo htmlspecialchars($item['precio']); ?> Bs</td>
                                 <td><?php echo htmlspecialchars($item['cantidad']); ?></td>
                                 <td><?php echo number_format($item['precio'] * $item['cantidad'], 2); ?> Bs</td>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($carrito as $item): ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($item['nombre']); ?></td>
+                                    <td><?php echo htmlspecialchars($item['precio']); ?> Bs</td>
+                                    <td><?php echo htmlspecialchars($item['cantidad']); ?></td>
+                                    <td><?php echo number_format($item['precio'] * $item['cantidad'], 2); ?> Bs</td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
 
-            <!-- Sección del Total -->
-            <div class="total-section">
-                <span class="total-text">TOTAL:</span>
-                <span class="total-amount"><?php echo number_format($totalCarrito, 2); ?> Bs</span>
-            </div>
+                <!-- Sección del Total -->
+                <div class="total-section">
+                    <span class="total-text">TOTAL:</span>
+                    <span class="total-amount"><?php echo number_format($totalCarrito, 2); ?> Bs</span>
+                </div>
 
-            <!-- Botones de acción -->
-            <div class="botones-envio">
-                <a href="productos.php" class="button" id="volver">Seguir comprando</a>
-                <input type="submit" class="button-procesar" value="Realizar compra">
+                <!-- Botones de acción -->
+                <div class="botones-envio">
+                    <a href="productos.php" class="button" id="volver">Seguir comprando</a>
+                    <input type="submit" class="button-procesar" value="Realizar compra">
+                </div>
+            </form>
+        </div>
+
+        <!-- Resumen alineado a la derecha -->
+        <div class="resumen">
+            <div class="subtotal-box">
+                <h3 class="subtotal-title">Subtotal</h3>
+                <p class="productos-count">(<?php echo count($carrito); ?> productos)</p>
+                <h2 class="total-price"><?php echo number_format($totalCarrito, 2); ?> Bs</h2>
+                <form id="procesar-pago" action="conf_paipay.php?total=<?php echo number_format($totalCarrito, 2, '.', ''); ?>" method="POST">
+                    <input type="submit" class="finalizar-button" value="Finalizar Pedido">
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </main>
 
@@ -406,6 +595,7 @@ foreach ($carrito as $item) {
                     </div>
                 </div>
 
+>>>>>>> origin/zapata
                 <!-- Columna 3: Texto -->
                 <div class="col-md-4 mb-4">
                     <h5>COLUMNA_FOOTER3</h5>

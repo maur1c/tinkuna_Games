@@ -30,16 +30,26 @@ foreach ($carrito as $item) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link href="assets/css/overlay.css" rel="stylesheet" type="text/css"> <!-- Estilos -->
+</head>
+<body>
+>>>>>>> origin/zapata
 <!-- overlay_carrito.php -->
 <div id="overlay-bg" class="overlay-bg hidden"></div> <!-- Capa de fondo oscurecido -->
 
 <div id="carrito-overlay" class="overlay-carrito hidden"> <!-- Añadimos 'hidden' aquí para ocultarlo al inicio -->
     <div class="overlay-contenido">
-        <!-- Botón de cierre -->
-        <button id="cerrar-overlay" class="cerrar-overlay">&times;</button>
-
-        <!-- Título -->
-        <h2>Carrito de Compras</h2>
+        <!-- Encabezado con título y botón de cierre -->
+        <div class="encabezado">
+            <h2>Carrito de Compras</h2>
+            <button id="cerrar-overlay" class="cerrar-overlay">&times;</button>
+        </div>
 
         <!-- Lista de productos (se genera dinámicamente con PHP) -->
         <div id="carrito-productos" class="carrito-productos">
@@ -73,12 +83,18 @@ foreach ($carrito as $item) {
 
         <!-- Botones de acción -->
         <div class="botones-envio">
-            <a href="carrito.php" class="button" id="Ver Carrito">Ver Carrito</a>
+
+            <a href="carrito.php" class="btn-ver-carrito">Ver Carrito</a>
             <form action="conf_paipay.php?total=<?php echo number_format($totalCarrito, 2, '.', ''); ?>" method="POST">
-                <input type="submit" class="button-procesar" value="Realizar compra">
+                <input type="submit" class="btn-comprar" value="Realizar compra">
+
             </form>
         </div>
     </div>
 </div>
 
 <script src="assets/js/carrito.js" defer></script>
+
+</body>
+</html>
+

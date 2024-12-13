@@ -1,0 +1,167 @@
+/* Estilos generales del contenedor del overlay */
+body .overlay-carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-color: white !important;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3) !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.3s ease-in-out !important;
+    z-index: 1001 !important;
+    border-left: 4px solid #ff6600 !important; /* Borde destacado */
+}
+
+/* Fondo oscuro detrás del overlay */
+body .overlay-bg {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    z-index: 1000 !important;
+    display: none !important;
+}
+
+/* Mostrar el overlay y la capa oscurecida */
+body .overlay-carrito.mostrar {
+    transform: translateX(0) !important;
+}
+
+body .overlay-bg.mostrar {
+    display: block !important;
+}
+
+/* Contenido dentro del overlay */
+body .overlay-contenido {
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    justify-content: space-between; /* Esto asegura que el contenido se distribuye entre el encabezado y los botones */
+}
+
+/* Contenedor del encabezado (título y botón de cierre) */
+body .overlay-contenido .encabezado {
+    display: flex;
+    justify-content: space-between; /* Alinea el título y el botón de cierre en extremos opuestos */
+    align-items: center;
+    padding-bottom: 10px; /* Espaciado inferior */
+    border-bottom: 2px solid #ff6600; /* Línea separadora */
+    margin-bottom: 15px; /* Espaciado después del encabezado */
+}
+
+/* Título del carrito */
+body .overlay-contenido h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Elimina el margen para evitar desalineación */
+}
+
+/* Botón de cierre del overlay */
+body .cerrar-overlay {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff6600; /* Rojo para el botón de cierre */
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Botón circular */
+    transition: background-color 0.3s ease;
+}
+
+body .cerrar-overlay:hover {
+    background-color: rgba(255, 107, 107, 0.1); /* Fondo suave al pasar el cursor */
+}
+
+/* Tabla de productos */
+body .tabla {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+body .tabla th, body .tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+body .tabla th {
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #f9f9f9;
+}
+
+body .tabla td {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Sección de total */
+body .total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Ajuste para poner el total sobre los botones */
+    padding-top: 1rem;
+    border-top: 2px solid #ff6600;
+}
+
+/* Botones de acción */
+body .botones-envio {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+/* Aseguramos que los botones estén al final */
+body .overlay-contenido .total-section, 
+body .overlay-contenido .botones-envio {
+    margin-top: auto; /* Esto empuja el contenido hacia el fondo del contenedor */
+}
+
+/* Botón de "Ver Carrito" */
+body .btn-ver-carrito {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+body .btn-comprar{
+    background-color: #1d1c1c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+
+body .btn-ver-carrito:hover {
+    background-color: #ff6600;
+}
+
+body .btn-comprar:hover {
+    background-color: #181717;
+}
