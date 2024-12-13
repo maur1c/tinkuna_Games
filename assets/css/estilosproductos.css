@@ -1,0 +1,91 @@
+
+
+
+/*productos-card*/
+.container-productos{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  background-color: white;
+  
+}
+.container-productos .card{
+  width: 260px;
+  height: 390px;
+  background: white;
+  color:black;
+  border-radius: 8px;
+  border:1px solid whitesmoke;
+  box-shadow: rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+  transition: all 0.25s;
+}
+.container-productos .card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+.container-productos .card img{
+  width: 260px;
+  height: 190px;
+  cursor: pointer;
+}
+.container-productos .card h5{
+  font-weight: 600;
+  padding: 5px;
+}
+.container-productos .card p{
+  padding-top: 5px;
+}
+.container-productos .card a{
+  padding:10px;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+/*contenido*/
+.container{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.precio {
+  color: #ff6600; /* Naranja */
+  font-weight: bold; /* Negritas */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+/* Estilo para el botón "Comprar" */
+button.button.agregar-carrito {
+  background-color: #ff6600; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover (al pasar el cursor) */
+button.button.agregar-carrito:hover {
+  background-color: #e65c00; /* Fondo más oscuro */
+}
+
+
+
+
+
+
