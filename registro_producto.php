@@ -115,8 +115,6 @@ if (!empty($_POST)) {
             
             <label for="imagen">Imagen</label>
             <input type="file" name="imagen" id="imagen" accept="image/*" required>
->>>>>>> main
-            
             <button type="submit" class="btn_save"><i class="far fa-save"></i> Guardar Producto</button>
         </form>
     </div>

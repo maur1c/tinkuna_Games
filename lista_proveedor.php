@@ -1,12 +1,8 @@
 <?php 
 session_start();
-<<<<<<< HEAD
-if ($_SESSION['rol_id'] != 1 && $_SESSION['rol_id'] != 4) {
-	header("Location: login.php");
-=======
+
 if ($_SESSION['rol_id'] != 1 && $_SESSION['rol_id'] != 2) {
     header("login.php");
->>>>>>> main
 }
 include "conexion.php";	
 include "functions.php";

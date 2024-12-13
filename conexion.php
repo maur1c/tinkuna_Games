@@ -3,7 +3,7 @@ $host = 'localhost';
 $db = 'tinkuna_games';
 $user = 'root';  // Usuario por defecto de XAMPP
 
-$password = '';  // Contraseña por defecto en XAMPP es vacía
+$password = 'oliver123';  // Contraseña por defecto en XAMPP es vacía
 
 
 

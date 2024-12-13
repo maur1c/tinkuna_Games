@@ -410,7 +410,7 @@
   <div class="footer-mini-container">
     <div class="container">
       <div>
-        <h5 class="footer-mini-text">TINKUNA <span>games</span></h5>
+        <h5 class="footer-mini-text">TINKUNA <span>GAMES</span></h5>
       </div>
       <div>
         <p class="copyright">&copy; 2024 Todos los derechos reservados</p>

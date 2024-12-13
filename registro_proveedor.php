@@ -6,11 +6,7 @@ if ($_SESSION['rol_id'] != 1 && $_SESSION['rol_id'] != 2) {
 }
 
 include "conexion.php";
-<<<<<<< HEAD
-include "functions.php";
-=======
 include "functions.php"; 
->>>>>>> main
 
 if (!empty($_POST)) {
     $alert = '';
@@ -24,17 +20,10 @@ if (!empty($_POST)) {
         $contacto = $_POST['contacto'];
         $telefono = $_POST['telefono'];
         $direccion = $_POST['direccion'];
-<<<<<<< HEAD
-        $usuario_id = $_SESSION['rol_id'];  // Corrección realizada aquí
-        
-        try {
-            // Consulta con PDO
-=======
         $usuario_id = $_SESSION['rol_id'];  // Este valor debería existir en 'proveedor' (no en 'productos')
 
         try {
             // Realizar la inserción directamente
->>>>>>> main
             $query_insert = $conn->prepare("INSERT INTO proveedor (proveedor, contacto, telefono, direccion, usuario_id)
                                             VALUES (:proveedor, :contacto, :telefono, :direccion, :usuario_id)");
             $query_insert->bindParam(':proveedor', $proveedor);
