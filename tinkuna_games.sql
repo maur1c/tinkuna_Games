@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
+<<<<<<< HEAD
 -- Tiempo de generación: 08-11-2024 a las 18:27:26
+=======
+-- Tiempo de generación: 14-11-2024 a las 12:21:28
+>>>>>>> main
 -- Versión del servidor: 8.3.0
 -- Versión de PHP: 8.3.3
 
@@ -129,6 +133,7 @@ CREATE TABLE `historial_de_compra` (
 --
 
 INSERT INTO `historial_de_compra` (`id`, `usuario_id`, `producto_id`, `cantidad`, `precio`, `fecha_compra`) VALUES
+<<<<<<< HEAD
 (1, 1, 7, 1, 400.00, '2024-10-11 15:28:10'),
 (2, 1, 6, 1, 300.00, '2024-10-11 15:29:49'),
 (3, 1, 7, 1, 400.00, '2024-10-11 15:37:03'),
@@ -168,6 +173,43 @@ INSERT INTO `historial_de_compra` (`id`, `usuario_id`, `producto_id`, `cantidad`
 (38, 1, 11, 1, 5.00, '2024-10-28 15:56:29'),
 (39, 3, 2, 1, 20.00, '2024-11-08 10:48:30'),
 (40, 3, 2, 1, 20.00, '2024-11-08 10:48:30');
+=======
+(52, 3, 45, 1, 145.00, '2024-11-12 15:05:22'),
+(53, 1, 48, 1, 170.00, '2024-11-12 16:03:25'),
+(54, 1, 49, 1, 170.00, '2024-11-12 16:12:07');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `juegos_de_mesa`
+--
+
+CREATE TABLE `juegos_de_mesa` (
+  `id_juego` int NOT NULL,
+  `nombre` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `descripcion` text COLLATE utf8mb4_general_ci,
+  `categoria` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `precio` decimal(10,2) NOT NULL,
+  `estatus` tinyint(1) DEFAULT '1',
+  `publicado` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `juegos_de_mesa`
+--
+
+INSERT INTO `juegos_de_mesa` (`id_juego`, `nombre`, `descripcion`, `categoria`, `precio`, `estatus`, `publicado`) VALUES
+(5, 'arke123456', 'juego IAao', 'familiar', 145.00, 1, 1),
+(6, 'Monopoly 12', 'juego familiar', 'familiar', 300.00, 1, 1),
+(7, 'arke', 'juego', 'estatega', 30.00, 1, 1),
+(8, 'zombiecide', 'juego', 'apocalictico', 170.00, 1, 1),
+(9, 'zombiecide', 'juego12', 'apocalictico1', 30.00, 1, 1),
+(10, 'simon', 'juego', 'estatega', 10.00, 1, 1),
+(11, 'simon1', 'juego', 'familiar', 170.00, 1, 1),
+(12, 'catan', 'juego', 'estratega', 170.00, 1, 1),
+(13, 'Ajedrez', 'sadasd', 'Estrategia', 30.00, 1, 0),
+(14, 'Ajedrez asdas', 'asdasdadasd', 'Estrategia', 30.00, 1, 0);
+>>>>>>> main
 
 -- --------------------------------------------------------
 
@@ -203,17 +245,26 @@ CREATE TABLE `productos` (
   `descripcion` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `precio` decimal(10,2) DEFAULT NULL,
   `imagen` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+<<<<<<< HEAD
   `codproducto` int NOT NULL,
   `proveedor` int DEFAULT NULL,
   `existencia` int DEFAULT NULL,
   `date_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `foto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+=======
+  `proveedor` int DEFAULT NULL,
+  `existencia` int DEFAULT NULL,
+  `date_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `id_juego` int DEFAULT NULL,
+  `estatus` tinyint(1) DEFAULT '1'
+>>>>>>> main
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
+<<<<<<< HEAD
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `codproducto`, `proveedor`, `existencia`, `date_add`, `foto`) VALUES
 (2, 'arke', 'juego', 20.00, 'Ark Nova.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
 (6, 'catan', 'juego', 300.00, 'imagesCATAN.jpeg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
@@ -222,6 +273,21 @@ INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `cod
 (10, 'zombie', 'juegos buenos', 10.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
 (11, 'zombie', 'juegos buenos', 5.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL),
 (12, 'zombie', 'juegos buenos', 5.00, 'zombicide.jpg', 0, NULL, NULL, '2024-11-08 10:45:39', NULL);
+=======
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `precio`, `imagen`, `proveedor`, `existencia`, `date_add`, `id_juego`, `estatus`) VALUES
+(31, 'Monopoly 12', 'juego familiar', 300.00, '1731439527_accsesorios.jpeg', NULL, NULL, '2024-11-12 13:53:58', 6, 1),
+(32, 'arke', 'juego', 30.00, 'Ark Nova.jpg', NULL, NULL, '2024-11-12 13:56:45', 7, 1),
+(41, 'zombiecide', 'juego', 170.00, 'zombicide.jpg', NULL, NULL, '2024-11-12 14:15:22', 8, 1),
+(45, 'arke123456', 'juego IAao', 145.00, '1731438233_consola.jpeg', NULL, NULL, '2024-11-12 14:46:43', 5, 1),
+(46, 'zombiecide', 'juego12', 30.00, '1731438649_zombicide.jpg', NULL, NULL, '2024-11-12 14:46:48', 9, 1),
+(47, 'simon', 'juego', 10.00, 'Logo.jpg', NULL, NULL, '2024-11-12 15:54:39', 10, 1),
+(48, 'simon1', 'juego', 170.00, 'video juegos.png', NULL, NULL, '2024-11-12 16:02:22', 11, 1),
+(49, 'catan', 'juego', 170.00, 'imagesCATAN.jpeg', NULL, NULL, '2024-11-12 16:04:12', 12, 1),
+(50, 'Ajedrez', 'sadasd', 30.00, 'Ajedrez.jpeg', NULL, NULL, '2024-11-13 21:37:49', 13, 1),
+(99, 'Producto para Prueba', 'Producto para validar clave foránea', NULL, NULL, NULL, NULL, '2024-11-13 21:49:36', NULL, 1),
+(100, 'Producto de Prueba', 'Descripción de prueba', 100.00, NULL, NULL, NULL, '2024-11-13 22:01:41', NULL, 1),
+(101, 'Ajedrez asdas', 'asdasdadasd', 30.00, 'Ajedrez.jpeg', NULL, NULL, '2024-11-13 22:03:09', 14, 1);
+>>>>>>> main
 
 -- --------------------------------------------------------
 
@@ -245,7 +311,14 @@ CREATE TABLE `proveedor` (
 --
 
 INSERT INTO `proveedor` (`codproveedor`, `proveedor`, `contacto`, `telefono`, `direccion`, `date_add`, `usuario_id`, `estatus`) VALUES
+<<<<<<< HEAD
 (2, 'Helados', 'oliver franz', 63874473, '6 de agosto', '2024-11-08 13:04:36', 1, 1);
+=======
+(31, 'helado', 'Mauricio Mamani F', 5354354, 'Bolivia-Cochabamba', '2024-11-12 15:46:38', 1, 0),
+(32, 'pil', 'Claudia Rosaless', 43545476, 'Bolivia-Cochabamba', '2024-11-12 15:52:50', 1, 1),
+(41, 'Ask aaaas', 'Tony Fernandez a', 87664438, 'indefinido', '2024-11-13 22:10:24', 1, 1),
+(42, 'Antonio', 'Montana', 1232245, 'Zona Norte', '2024-11-13 22:10:52', 1, 1);
+>>>>>>> main
 
 -- --------------------------------------------------------
 
@@ -352,6 +425,12 @@ ALTER TABLE `historial_de_compra`
   ADD KEY `producto_id` (`producto_id`);
 
 --
+-- Indices de la tabla `juegos_de_mesa`
+--
+ALTER TABLE `juegos_de_mesa`
+  ADD PRIMARY KEY (`id_juego`);
+
+--
 -- Indices de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
@@ -362,7 +441,15 @@ ALTER TABLE `pedidos`
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_juego` (`id_juego`);
+
+--
+-- Indices de la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  ADD PRIMARY KEY (`codproveedor`),
+  ADD KEY `usuario_id` (`usuario_id`);
 
 --
 -- Indices de la tabla `proveedor`
@@ -393,7 +480,11 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
+<<<<<<< HEAD
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+=======
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+>>>>>>> main
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
@@ -417,7 +508,17 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `historial_de_compra`
 --
 ALTER TABLE `historial_de_compra`
+<<<<<<< HEAD
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+=======
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
+-- AUTO_INCREMENT de la tabla `juegos_de_mesa`
+--
+ALTER TABLE `juegos_de_mesa`
+  MODIFY `id_juego` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+>>>>>>> main
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -429,7 +530,13 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+
+--
+-- AUTO_INCREMENT de la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  MODIFY `codproveedor` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedor`
@@ -487,11 +594,24 @@ ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`);
 
 --
+<<<<<<< HEAD
 -- Filtros para la tabla `proveedor`
 --
 ALTER TABLE `proveedor`
   ADD CONSTRAINT `proveedor_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `proveedor_ibfk_2` FOREIGN KEY (`codproveedor`) REFERENCES `productos` (`id`) ON DELETE CASCADE;
+=======
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `fk_id_juego` FOREIGN KEY (`id_juego`) REFERENCES `juegos_de_mesa` (`id_juego`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  ADD CONSTRAINT `proveedor_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+>>>>>>> main
 
 --
 -- Filtros para la tabla `usuarios`

@@ -44,7 +44,7 @@
         <li class="principal">
             <a href="#"><i class="far fa-file-alt"></i> Facturas</a>
             <ul>
-                <li><a href="registro_factura.php"><i class="fas fa-file-alt"></i> Nueva Factura</a></li>
+                <li><a href="nueva_venta.php"><i class="fas fa-file-alt"></i> Nueva Venta</a></li>
                 <li><a href="lista_facturas.php"><i class="fas fa-clipboard-list"></i> Lista de Facturas</a></li>
             </ul>
         </li>
