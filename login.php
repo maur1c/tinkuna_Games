@@ -1,5 +1,6 @@
 <?php
 include 'conexion.php'; // Conexión a la base de datos
+include 'functions.php';
 session_start(); // Iniciar la sesión
 
 $alert = ''; // Variable para almacenar alertas o errores

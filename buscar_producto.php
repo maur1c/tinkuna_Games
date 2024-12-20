@@ -102,17 +102,13 @@ include "functions.php";
             <td><?php echo $data["precio"]; ?></td>
             <td>
                 <a class="link_edit" href="editar_producto.php?id=<?php echo $data["id_juego"]; ?>">Editar</a>
-                |
-<<<<<<< HEAD
-                <a class="link_delete" href="eliminar_producto.php?id=<?php echo $data["id_juego"]; ?>">Eliminar</a>
-=======
                 <a class="link_delete" href="eliminar_confirmar_producto.php?id=<?php echo $data["id_juego"]; ?>">Eliminar</a>
                 <?php if ($data['publicado'] == 1): ?>
                         <a class="link_publish" href="publicar_cliente_producto.php?id=<?php echo $data['id_juego']; ?>&estado=0"><i class="fas fa-eye-slash"></i> Despublicar</a>
                     <?php else: ?>
                         <a class="link_publish" href="publicar_cliente_producto.php?id=<?php echo $data['id_juego']; ?>&estado=1"><i class="fas fa-eye"></i> Publicar</a>
                     <?php endif; ?>
->>>>>>> main
+
             </td>
         </tr>
     <?php 

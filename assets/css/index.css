@@ -1,0 +1,47 @@
+.subscription-row {
+    display: flex; /* Alinear los elementos en una fila */
+    align-items: center; /* Centrar verticalmente */
+    gap:150px; /* Espacio entre los elementos */
+    background-color: #ff6600; /* Fondo naranja para la fila */
+    padding: 50px;
+  }
+
+  .subscribe-text {
+    color: white; /* Texto blanco */
+    font-size: 1.3rem;
+    font-weight: bold;
+    flex-basis: 10%; /* Asegura que ocupe toda la línea */
+  }
+
+  .input-field {
+    border: 2px solid white; /* Borde blanco */
+    background-color: #ff6600; /* Fondo naranja */
+    color: white; /* Texto blanco */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem;
+    outline: none; /* Quitar el borde azul al enfocar */
+    width: 325px; /* Ancho predeterminado */
+  }
+
+  .input-field::placeholder {
+    color: white; /* Color blanco para el placeholder */
+    opacity: 0.7; /* Un poco más tenue */
+  }
+
+  .subscribe-button {
+    background-color: white; /* Fondo blanco */
+    color: orange; /* Texto naranja */
+    padding: 10px;
+    border: 2px solid orange; /* Borde naranja */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem;
+    cursor: pointer; /* Cambiar a cursor de mano */
+    font-weight: bold;
+  }
+
+  .subscribe-button:hover {
+    background-color: #ff6600; /* Fondo naranja al pasar el mouse */
+    color: white; /* Texto blanco */
+    transition: 0.3s; /* Suavizar la transición */
+  }
