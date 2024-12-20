@@ -61,8 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="email">Correo electrónico</label>
             <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
 
-            <label for="contraseña">Clave</label>
-            <input type="password" name="contraseña" id="contraseña" placeholder="Clave de acceso" required>
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
 
             <label for="rol">Tipo Usuario</label>
             <select name="rol" id="rol" required>

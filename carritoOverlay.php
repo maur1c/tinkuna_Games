@@ -39,7 +39,6 @@ foreach ($carrito as $item) {
     <link href="assets/css/overlay.css" rel="stylesheet" type="text/css"> <!-- Estilos -->
 </head>
 <body>
->>>>>>> origin/zapata
 <!-- overlay_carrito.php -->
 <div id="overlay-bg" class="overlay-bg hidden"></div> <!-- Capa de fondo oscurecido -->
 

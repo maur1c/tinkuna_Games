@@ -378,8 +378,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <span class="subscribe-text">SUSCRIBETE</span>
   <input type="text" placeholder="Correo" class="input-field">
   <input type="text" placeholder="Nombre" class="input-field">
-  <input type="text" placeholder="Apellido" class="input-field">
-  <button class="subscribe-button">Suscribirse</button>
 </div>
 
   <!-- Footer Social -->

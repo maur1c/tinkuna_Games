@@ -91,8 +91,8 @@ if (!empty($_POST)) {
         <div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
         <form action="" method="post">
-            <label for="nit">NIT</label>
-            <input type="number" name="nit" id="nit" placeholder="Número de NIT" value="<?php echo isset($_POST['nit']) ? $_POST['nit'] : ''; ?>">
+            <label for="nit">CI/NIT</label>
+            <input type="number" name="nit" id="nit" placeholder="NIT o Carnet" value="<?php echo isset($_POST['nit']) ? $_POST['nit'] : ''; ?>">
             
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" value="<?php echo isset($_POST['nombre']) ? $_POST['nombre'] : ''; ?>">

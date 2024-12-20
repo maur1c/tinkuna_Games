@@ -97,7 +97,7 @@ if (!empty($_POST)) {
 
 <section id="container">
     <div class="form_register">
-        <h1><i class="fas fa-dice"></i> Registro Producto</h1>
+        <h1><i class="fas fa-building"></i> Registro Producto</h1>
         <hr>
         <div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
         <form action="" method="post" enctype="multipart/form-data">

@@ -442,14 +442,6 @@ foreach ($carrito as $item) {
 
 
 
-
-
-
-
-
-
->>>>>>> origin/zapata
-
 </head>
 <body>
 <header>
@@ -482,7 +474,6 @@ foreach ($carrito as $item) {
                 <div id="carrito" class="contenido">
                     <table class="tabla" id="lista-compra">
                         <thead>
->>>>>>> origin/zapata
                             <tr>
                                 <td><?php echo htmlspecialchars($item['nombre']); ?></td>
                                 <td><?php echo htmlspecialchars($item['precio']); ?> Bs</td>
@@ -594,8 +585,6 @@ foreach ($carrito as $item) {
                         </div>
                     </div>
                 </div>
-
->>>>>>> origin/zapata
                 <!-- Columna 3: Texto -->
                 <div class="col-md-4 mb-4">
                     <h5>COLUMNA_FOOTER3</h5>

@@ -113,7 +113,6 @@ $productos = $query->fetchAll(PDO::FETCH_ASSOC);
         <?php } ?>
         </ul>
     </div>
->>>>>>> main
 </section>
 
 <script src="assets/js/functions.js" defer></script>

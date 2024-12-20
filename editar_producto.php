@@ -74,6 +74,7 @@ if (isset($_GET['id'])) {
         header('Location: lista_producto.php');
         exit();
     }
+    
 } else {
     header('Location: lista_producto.php');
     exit();
@@ -110,6 +111,7 @@ if (isset($_GET['id'])) {
         <hr>
         <div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
+
         <form action="" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>">
 
@@ -140,5 +142,6 @@ if (isset($_GET['id'])) {
         <?php endif; ?>
     </div>
 </section>
+
 </body>
 </html>

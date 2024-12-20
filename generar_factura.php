@@ -58,13 +58,13 @@ $pdf->Cell(40, 10, 'Subtotal', 1, 1, 'C', true);
 $pdf->SetFont('Arial', '', 12);
 $pdf->Cell(80, 10, mb_convert_encoding($factura['descripcion_producto'], 'ISO-8859-1', 'UTF-8'), 1, 0, 'L');
 $pdf->Cell(30, 10, $factura['cantidad'], 1, 0, 'C');
-$pdf->Cell(40, 10, 'S/. ' . number_format($factura['precio_unitario'], 2), 1, 0, 'R');
-$pdf->Cell(40, 10, 'S/. ' . number_format($factura['subtotal'], 2), 1, 1, 'R');
+$pdf->Cell(40, 10, 'Bs/. ' . number_format($factura['precio_unitario'], 2), 1, 0, 'R');
+$pdf->Cell(40, 10, 'Bs/. ' . number_format($factura['subtotal'], 2), 1, 1, 'R');
 
 // Total
 $pdf->SetFont('Arial', 'B', 12);
 $pdf->Cell(150, 10, 'Total:', 1, 0, 'R');
-$pdf->Cell(40, 10, 'S/. ' . number_format($factura['subtotal'], 2), 1, 1, 'R');
+$pdf->Cell(40, 10, 'Bs/. ' . number_format($factura['subtotal'], 2), 1, 1, 'R');
 
 // Leyenda
 $pdf->Ln(10);
