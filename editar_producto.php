@@ -7,14 +7,6 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['rol_id'] != 1) {
     header('Location: login.php');
     exit();
 }
-
-<<<<<<< HEAD
-$nombre = $descripcion = $precio = '';
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-
-    // Obtener los datos del producto
-=======
 $nombre = $descripcion = $precio = $imagen = '';
 $publicado = 0;  // Campo para verificar si el producto está publicado
 
@@ -22,7 +14,6 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Obtener los datos del producto desde la tabla juegos_de_mesa
->>>>>>> main
     $stmt = $conn->prepare("SELECT * FROM juegos_de_mesa WHERE id_juego = ?");
     $stmt->execute([$id]);
     $producto = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -31,8 +22,6 @@ if (isset($_GET['id'])) {
         $nombre = $producto['nombre'];
         $descripcion = $producto['descripcion'];
         $precio = $producto['precio'];
-<<<<<<< HEAD
-=======
         $publicado = $producto['publicado'];
 
         // Obtener la imagen desde la tabla productos
@@ -46,7 +35,6 @@ if (isset($_GET['id'])) {
         } else {
             $imagen = 'default.jpg';
         }
->>>>>>> main
     } else {
         echo "Producto no encontrado.";
         exit();
@@ -56,16 +44,6 @@ if (isset($_GET['id'])) {
         $nombre = $_POST['nombre'];
         $descripcion = $_POST['descripcion'];
         $precio = $_POST['precio'];
-<<<<<<< HEAD
-
-        // Actualizar el producto en la base de datos
-        $stmt = $conn->prepare("UPDATE juegos_de_mesa SET nombre = ?, descripcion = ?, precio = ? WHERE id_juego = ?");
-        $stmt->execute([$nombre, $descripcion, $precio, $id]);
-
-        header('Location: lista_producto.php');
-        exit();
-    }
-=======
     
         // Procesar la imagen, si se ha subido una nueva
         if ($_FILES['imagen']['name']) {
@@ -95,8 +73,7 @@ if (isset($_GET['id'])) {
         header('Location: lista_producto.php');
         exit();
     }
-    
->>>>>>> main
+  
 } else {
     header('Location: lista_producto.php');
     exit();
@@ -133,11 +110,7 @@ if (isset($_GET['id'])) {
         <hr>
         <div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
 
-<<<<<<< HEAD
-        <form action="" method="post">
-=======
         <form action="" method="post" enctype="multipart/form-data">
->>>>>>> main
             <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>">
 
             <label for="nombre">Nombre</label>
@@ -149,12 +122,6 @@ if (isset($_GET['id'])) {
             <label for="precio">Precio</label>
             <input type="text" name="precio" id="precio" placeholder="Precio" value="<?php echo htmlspecialchars($precio); ?>">
 
-<<<<<<< HEAD
-            <button type="submit" class="btn_save"> <i class="far fa-edit"></i> Actualizar Producto</button>
-        </form>
-    </div>
-</section>
-=======
             <label for="imagen">Imagen</label>
             <input type="file" name="imagen" id="imagen">
             <p>Imagen actual: <img src="<?php echo 'imagenes/' . htmlspecialchars($imagen); ?>" alt="Imagen del producto" width="100"></p> <!-- Mostrar la imagen actual -->
@@ -174,6 +141,5 @@ if (isset($_GET['id'])) {
     </div>
 </section>
 
->>>>>>> main
 </body>
 </html>

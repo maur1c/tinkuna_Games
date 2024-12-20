@@ -36,7 +36,7 @@ include "functions.php";
 
 <section id="container">
     <div class="form_register">
-        <h1><i class="fas fa-dice"></i> Generar Factura</h1>
+        <h1><i class="fas fa-building"></i> Generar Factura</h1>
         <hr>
         <div class="alert"></div>
         
